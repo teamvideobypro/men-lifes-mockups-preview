@@ -1,0 +1,2728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6-Week 1:1 Coaching Program ($1,795) | Men's Life Mastery</title>
+  
+  <!-- Google Fonts & Custom Web Fonts matching reference site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       WIX DESIGN SYSTEM & SKELETON CLASSES
+       Platform: Wix Compatible Architecture
+       Replicated directly from menslifemastery.com live reference DOM
+       ========================================================================== */
+    :root {
+      /* Reference Color Palette */
+      --color-black-pure: #000000;
+      --color-hero-bg: #303339;
+      --color-cream: #FBF8F2;          /* Wix canvas warm cream */
+      --color-slate-blue: #304C68;     /* Signature brand navy slate */
+      --color-slate-dark: #1F3347;     /* Hover & active dark */
+      --color-sand: #EDE8D0;           /* Warm Sand / Card Accent */
+      --color-sand-light: #F4EFE0;     /* Soft highlight */
+      --color-dark: #1A1A1A;           /* Primary off-black text */
+      --color-charcoal-dark: #222224;  /* Deep section charcoal */
+      --color-reviews-bg: #303339;     /* Reviews section charcoal */
+      --color-muted: #666666;          /* Body secondary */
+      --color-border: #D8D3C8;         /* Warm border */
+      --color-border-dark: #383838;    /* Dark border */
+      --color-white: #FFFFFF;
+      --color-gold: #C89B3C;           /* Gold accent */
+      
+      /* Typography */
+      --font-brand: 'Akira Expanded', 'Kanit', sans-serif;
+      --font-display: 'Kanit', sans-serif;
+      --font-body: 'Instrument Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-alt: 'Montserrat', sans-serif;
+      
+      --wix-max-width: 1200px;
+      --wix-content-width: 1040px;
+      --transition: all 0.25s ease-in-out;
+    }
+
+    /* CSS Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-hero-bg);
+      color: var(--color-dark);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    /* ==========================================================================
+       VIEWPORT SWITCHER TOOLBAR (Review Helper)
+       ========================================================================== */
+    .viewport-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100000;
+      background: #111827;
+      color: #E5E7EB;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #374151;
+      font-size: 13px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .viewport-toolbar .info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .viewport-toolbar .pill {
+      background: var(--color-slate-blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .viewport-toolbar .modes {
+      display: flex;
+      gap: 8px;
+      background: #1F2937;
+      padding: 3px;
+      border-radius: 6px;
+    }
+    .mode-btn {
+      background: transparent;
+      border: none;
+      color: #9CA3AF;
+      padding: 5px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .mode-btn:hover {
+      color: #FFFFFF;
+    }
+    .mode-btn.active {
+      background: var(--color-slate-blue);
+      color: #FFFFFF;
+    }
+    .preview-frame-container {
+      width: 100%;
+      transition: max-width 0.3s ease, margin 0.3s ease;
+      background: var(--color-hero-bg);
+    }
+    body.view-mobile .preview-frame-container {
+      max-width: 390px;
+      margin: 30px auto;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      border-radius: 36px;
+      overflow: hidden;
+      border: 10px solid #1F2937;
+    }
+    body.view-tablet .preview-frame-container {
+      max-width: 768px;
+      margin: 30px auto;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 8px solid #1F2937;
+    }
+
+    /* ==========================================================================
+       WIX STANDARD HEADER (wixui-header)
+       Black header with white logo & social icons matching screenshot
+       ========================================================================== */
+    .wixui-header {
+      background-color: var(--color-black-pure);
+      border-bottom: 1px solid #1E1E1E;
+      position: sticky;
+      top: 45px;
+      z-index: 999;
+      width: 100%;
+    }
+    .wixui-header__inner {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wixui-header__logo img {
+      height: 48px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    .wixui-horizontal-menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .wixui-horizontal-menu__list {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      align-items: center;
+    }
+    .wixui-horizontal-menu__item-label {
+      font-family: var(--font-alt);
+      font-size: 13px;
+      font-weight: 600;
+      color: #DDDDDD;
+      text-transform: capitalize;
+      letter-spacing: 0.02em;
+      padding: 6px 0;
+      transition: var(--transition);
+    }
+    .wixui-horizontal-menu__item-label:hover,
+    .wixui-horizontal-menu__item.active .wixui-horizontal-menu__item-label {
+      color: #FFFFFF;
+    }
+    .wixui-header__social {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .wixui-header__social a {
+      color: #AAAAAA;
+      width: 26px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    .wixui-header__social a:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .wixui-header__social svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* WIX BUTTON STYLES (wixui-button) */
+    .wixui-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 200px;
+      font-family: var(--font-alt);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      line-height: 1;
+    }
+    .wixui-button__icon-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: currentColor;
+      color: inherit;
+      margin-left: 4px;
+    }
+    .wixui-button__icon-circle svg {
+      width: 12px;
+      height: 12px;
+      fill: #FFFFFF;
+    }
+    
+    /* Header consultation button */
+    .wixui-button--header {
+      background: #FFFFFF;
+      color: var(--color-black-pure) !important;
+      padding: 8px 18px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .wixui-button--header:hover {
+      background: var(--color-sand);
+      transform: translateY(-1px);
+    }
+
+    /* Primary Pill Buttons */
+    .wixui-button--primary {
+      background: var(--color-slate-blue);
+      color: #FFFFFF !important;
+      padding: 16px 36px;
+      font-size: 14px;
+      border-color: var(--color-slate-blue);
+      box-shadow: 0 4px 16px rgba(48, 76, 104, 0.3);
+    }
+    .wixui-button--primary:hover {
+      background: var(--color-slate-dark);
+      border-color: var(--color-slate-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(48, 76, 104, 0.45);
+    }
+
+    /* Hero Light Pill Button (Matching Screenshot "LEARN MORE ->") */
+    .wixui-button--hero-white {
+      background: #FFFFFF;
+      color: var(--color-black-pure) !important;
+      padding: 15px 32px;
+      font-size: 13.5px;
+      font-weight: 800;
+      border-color: #FFFFFF;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+    }
+    .wixui-button--hero-white:hover {
+      background: var(--color-sand);
+      border-color: var(--color-sand);
+      transform: translateY(-2px);
+    }
+    .wixui-button--hero-white .wixui-button__icon-circle {
+      background: var(--color-black-pure);
+    }
+    .wixui-button--hero-white .wixui-button__icon-circle svg {
+      fill: #FFFFFF;
+    }
+
+    .wixui-button--secondary {
+      background: var(--color-sand);
+      color: var(--color-dark) !important;
+      padding: 15px 30px;
+      font-size: 13.5px;
+      border-color: var(--color-border);
+    }
+    .wixui-button--secondary:hover {
+      background: var(--color-dark);
+      color: #FFFFFF !important;
+      border-color: var(--color-dark);
+      transform: translateY(-2px);
+    }
+
+    .wixui-button--outline {
+      background: transparent;
+      color: var(--color-slate-blue) !important;
+      padding: 11px 22px;
+      font-size: 12.5px;
+      border: 1.5px solid var(--color-slate-blue);
+    }
+    .wixui-button--outline:hover {
+      background: var(--color-slate-blue);
+      color: #FFFFFF !important;
+    }
+
+    /* Mobile toggle */
+    .mobile-nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .mobile-nav-toggle svg {
+      width: 26px;
+      height: 26px;
+      fill: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       HERO SECTION (Matching Live Site Screenshot Shot 01)
+       Deep luxury dark billboard with high-fashion couple imagery
+       ========================================================================== */
+    .hero-wix-strip {
+      background: #303339 radial-gradient(circle at 75% 30%, rgba(48, 76, 104, 0.15) 0%, transparent 60%);
+      color: #FFFFFF;
+      padding: 50px 24px 60px;
+      position: relative;
+      border-bottom: 1px solid #1E1E1E;
+      overflow: hidden;
+    }
+    .hero-wix-strip::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(11,11,13,0.95) 0%, rgba(11,11,13,0.7) 45%, rgba(11,11,13,0.92) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-bg-media-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      z-index: 1;
+      filter: grayscale(20%);
+    }
+    .hero-inner-container {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 5;
+    }
+    
+    /* Left Photo Composition in Hero */
+    .hero-visual-col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-main-photo-frame {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 90%;
+      max-width: 440px;
+    }
+    .hero-main-photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero-inset-card {
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      width: 60%;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 3px solid #1A1A1E;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+    .hero-inset-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Right Copy Composition in Hero */
+    .hero-copy-col {
+      padding-left: 20px;
+    }
+    .hero-brand-title {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-brand-subtitle {
+      font-family: var(--font-alt);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #A0A5AA;
+      margin-bottom: 22px;
+    }
+    .hero-bullet-pillars {
+      list-style: none;
+      margin-bottom: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .hero-bullet-pillars li {
+      font-family: 'Georgia', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-bullet-pillars li::before {
+      content: '•';
+      color: #FFFFFF;
+      font-size: 24px;
+      line-height: 1;
+    }
+    .hero-headline-william {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.2;
+      color: var(--color-sand);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .hero-subheadline-william {
+      font-size: 17px;
+      line-height: 1.65;
+      color: #C8D0D8;
+      margin-bottom: 30px;
+      max-width: 540px;
+    }
+    .hero-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       CONTENT SECTION 1: TRANSFORM & PHILOSOPHY (Shot 02)
+       Canvas: Warm Cream #FBF8F2
+       Polaroids on left, Philosophy & Quote on right
+       ========================================================================== */
+    .transform-wix-strip {
+      background-color: var(--color-cream);
+      padding: 90px 24px;
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+    .transform-inner-container {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    
+    /* Left Polaroid Collage */
+    .polaroid-collage-wrap {
+      position: relative;
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .polaroid-card-1 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 250px;
+      background: #FFFFFF;
+      padding: 12px 12px 36px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      transform: rotate(-5deg);
+      transition: transform 0.3s ease;
+    }
+    .polaroid-card-1:hover {
+      transform: rotate(-2deg) scale(1.03);
+      z-index: 10;
+    }
+    .polaroid-card-2 {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      width: 240px;
+      background: #FFFFFF;
+      padding: 12px 12px 36px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      transform: rotate(4deg);
+      transition: transform 0.3s ease;
+      z-index: 4;
+    }
+    .polaroid-card-2:hover {
+      transform: rotate(1deg) scale(1.03);
+      z-index: 10;
+    }
+    .expertise-badge-pill {
+      position: absolute;
+      bottom: 25px;
+      left: 30px;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      z-index: 8;
+    }
+    .expertise-num {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--color-slate-blue);
+      line-height: 1;
+    }
+    .expertise-label {
+      font-family: var(--font-alt);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-dark);
+      line-height: 1.2;
+    }
+
+    /* Right Philosophy Copy */
+    .transform-copy-col {
+      padding-left: 10px;
+    }
+    .transform-heading {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--color-black-pure);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .transform-body {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #2E2E2E;
+      margin-bottom: 28px;
+    }
+    .quote-card-styled {
+      background: #FFFFFF;
+      border-left: 5px solid var(--color-slate-blue);
+      padding: 22px 24px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      margin-bottom: 28px;
+    }
+    .quote-text-styled {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--color-dark);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .quote-author-styled {
+      font-family: var(--font-alt);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-slate-blue);
+    }
+
+    /* ==========================================================================
+       "OUR SERVICES" / OFFER CARDS STRIP (Shot 03)
+       Dark Slate background with Founder Bill Cottles portrait backdrop
+       ========================================================================== */
+    .services-wix-strip {
+      background-color: var(--color-charcoal-dark);
+      position: relative;
+      padding: 90px 24px 100px;
+      color: #FFFFFF;
+      border-bottom: 1px solid #333333;
+      overflow: hidden;
+    }
+    /* Founder background photo matching reference screenshot */
+    .services-founder-backdrop {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 900px;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.18;
+      z-index: 1;
+      pointer-events: none;
+      filter: contrast(110%);
+    }
+    .services-inner-container {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+    .services-header-center {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 56px;
+    }
+    .pill-tag-white {
+      display: inline-block;
+      background: #FFFFFF;
+      color: var(--color-black-pure);
+      font-family: var(--font-alt);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 5px 16px;
+      border-radius: 200px;
+      margin-bottom: 16px;
+    }
+    .services-title {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+    }
+    .services-title span {
+      color: var(--color-sand);
+    }
+    .services-subtitle {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #CCCCCC;
+    }
+
+    /* Grid Layout matching Reference Screenshot */
+    /* Row 1: 2 Cards (Video Course, 1:1 Session) */
+    .services-grid-top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 860px;
+      margin: 0 auto 28px;
+    }
+    /* Row 2: 3 Cards (6-Week, 12-Week, SMV Strategy) */
+    .services-grid-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    /* WIX REPEATER CARD (wixui-repeater__item) */
+    .wix-service-card {
+      background: #FFFFFF;
+      color: var(--color-dark);
+      border-radius: 12px;
+      padding: 32px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+    .wix-service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+    .wix-service-card.highlighted {
+      border: 2px solid var(--color-sand);
+      box-shadow: 0 12px 35px rgba(237, 232, 208, 0.15);
+    }
+
+    /* Vertical Label on the Left (from reference screenshot) */
+    .card-vertical-tag {
+      position: absolute;
+      top: 28px;
+      left: 14px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: var(--font-alt);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #999999;
+      pointer-events: none;
+    }
+    .card-content-offset {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-icon-avatar {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 14px;
+    }
+    .card-service-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--color-dark);
+      margin-bottom: 6px;
+    }
+    .card-service-price {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--color-slate-blue);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .payment-plans-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #0E7490;
+      background: #E0F2FE;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .card-service-subheadline {
+      font-size: 14px;
+      font-weight: 600;
+      color: #444444;
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+    .card-service-bullets {
+      list-style: none;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .card-service-bullets li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #555555;
+      margin-bottom: 8px;
+    }
+    .card-service-bullets li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 800;
+      color: var(--color-slate-blue);
+      font-size: 13px;
+    }
+
+    /* Card Bottom Action: Gold Arrow Button in Corner (from screenshot) */
+    .card-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #EEEEEE;
+    }
+    .card-cta-text-link {
+      font-family: var(--font-alt);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-slate-blue);
+    }
+    .card-corner-arrow-box {
+      width: 32px;
+      height: 32px;
+      background: var(--color-sand);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-dark);
+      font-size: 14px;
+      font-weight: 800;
+      transition: var(--transition);
+    }
+    .wix-service-card:hover .card-corner-arrow-box {
+      background: var(--color-slate-blue);
+      color: #FFFFFF;
+      transform: translateX(3px);
+    }
+
+    /* ==========================================================================
+       COMPARISON TABLE SECTION ("Which program fits you?")
+       ========================================================================== */
+    .compare-wix-strip {
+      background: var(--color-cream);
+      padding: 84px 24px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .compare-inner-container {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+    }
+    .compare-header-center {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+    .compare-table-shell {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow-x: auto;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    table.wix-compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+      min-width: 720px;
+    }
+    .wix-compare-table th, 
+    .wix-compare-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: top;
+    }
+    .wix-compare-table th {
+      background: var(--color-sand);
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-dark);
+    }
+    .wix-compare-table th.highlight-col {
+      background: var(--color-slate-blue);
+      color: #FFFFFF;
+    }
+    .wix-compare-table td.highlight-col {
+      background: rgba(48, 76, 104, 0.03);
+      font-weight: 600;
+    }
+    .wix-compare-table td.row-feature {
+      font-weight: 700;
+      color: var(--color-dark);
+      background: #FAFAF8;
+      width: 22%;
+    }
+    .wix-compare-table tr:last-child td {
+      border-bottom: none;
+    }
+    .compare-footer-banner {
+      margin-top: 28px;
+      background: var(--color-sand);
+      border-radius: 10px;
+      padding: 22px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .compare-footer-banner p {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-dark);
+      flex: 1;
+      min-width: 280px;
+    }
+
+    /* ==========================================================================
+       HOW TO GET STARTED SECTION ("Three steps to the man you want to be")
+       ========================================================================== */
+    .steps-wix-strip {
+      background: #FFFFFF;
+      padding: 84px 24px;
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+    .steps-inner-container {
+      max-width: var(--wix-content-width);
+      margin: 0 auto;
+    }
+    .steps-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin: 44px 0;
+      text-align: left;
+    }
+    .wix-step-card {
+      background: var(--color-cream);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 30px 24px;
+      position: relative;
+    }
+    .wix-step-card-num {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--color-slate-blue);
+      line-height: 1;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .wix-step-card-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 10px;
+    }
+    .wix-step-card-desc {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444444;
+    }
+
+    /* ==========================================================================
+       CONSULTATION & BOOKING STRIP (Shot 05)
+       Matching Section 4 of reference screenshot
+       ========================================================================== */
+    .consultation-wix-strip {
+      background: var(--color-cream);
+      padding: 84px 24px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .consultation-inner-container {
+      max-width: var(--wix-content-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .consultation-photo-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .consultation-photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .consultation-copy-box p {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: #333333;
+    }
+
+    /* Wix Booking Card Replica */
+    .wix-booking-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+    .booking-card-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--color-dark);
+      margin-bottom: 6px;
+    }
+    .booking-card-title span {
+      color: var(--color-slate-blue);
+    }
+    .booking-card-desc {
+      font-size: 13.5px;
+      color: var(--color-muted);
+      margin-bottom: 20px;
+    }
+    .booking-service-choice {
+      background: var(--color-cream);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .booking-radio-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--color-slate-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .booking-radio-dot::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-slate-blue);
+    }
+    .booking-service-info {
+      flex: 1;
+    }
+    .booking-service-name {
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--color-dark);
+    }
+    .booking-service-sub {
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+    .booking-calendar-wrap {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .calendar-month-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--color-dark);
+      margin-bottom: 12px;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+      font-size: 12px;
+    }
+    .cal-day-head {
+      font-weight: 700;
+      color: #999999;
+      padding: 4px 0;
+    }
+    .cal-day {
+      padding: 8px 0;
+      border-radius: 4px;
+      color: var(--color-dark);
+      cursor: pointer;
+    }
+    .cal-day:hover {
+      background: var(--color-sand);
+    }
+    .cal-day.active {
+      background: var(--color-slate-blue);
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+    .cal-day.disabled {
+      color: #CCCCCC;
+      cursor: default;
+    }
+
+    /* ==========================================================================
+       TESTIMONIALS SECTION ("REVIEWS / THE WORD IS OUT!" Shot 06)
+       Matching Section 5 of reference screenshot exactly
+       ========================================================================== */
+    .reviews-wix-strip {
+      background-color: var(--color-reviews-bg);
+      color: #FFFFFF;
+      padding: 90px 24px 100px;
+      position: relative;
+      border-bottom: 1px solid #383838;
+      overflow: hidden;
+    }
+    .reviews-inner-container {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    /* Left Testimonial Quotes */
+    .reviews-header-left {
+      margin-bottom: 30px;
+    }
+    .reviews-main-title {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .reviews-eyebrow-sub {
+      font-family: var(--font-alt);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-sand);
+    }
+    .reviews-quotes-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .wix-review-card {
+      background: #FFFFFF;
+      color: var(--color-dark);
+      border-radius: 10px;
+      padding: 22px 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+    .review-quote-p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+    .review-author-name {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-slate-blue);
+      text-align: right;
+    }
+
+    /* Right Polaroid Collage with Dashed Arrow */
+    .reviews-collage-wrap {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dashed-arrow-graphic {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      width: 70%;
+      height: auto;
+      opacity: 0.7;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .reviews-polaroid-1 {
+      position: absolute;
+      top: 10px;
+      left: 40px;
+      width: 210px;
+      background: #FFFFFF;
+      padding: 10px 10px 28px;
+      border-radius: 4px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+      transform: rotate(-3deg);
+      z-index: 4;
+      transition: transform 0.3s ease;
+    }
+    .reviews-polaroid-1:hover {
+      transform: rotate(0deg) scale(1.03);
+      z-index: 10;
+    }
+    .reviews-polaroid-2 {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      width: 200px;
+      background: #FFFFFF;
+      padding: 10px 10px 28px;
+      border-radius: 4px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+      transform: rotate(5deg);
+      z-index: 5;
+      transition: transform 0.3s ease;
+    }
+    .reviews-polaroid-2:hover {
+      transform: rotate(2deg) scale(1.03);
+      z-index: 10;
+    }
+    .reviews-polaroid-3 {
+      position: absolute;
+      bottom: 40px;
+      left: 70px;
+      width: 220px;
+      background: #FFFFFF;
+      padding: 10px 10px 28px;
+      border-radius: 4px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      transform: rotate(-2deg);
+      z-index: 6;
+      transition: transform 0.3s ease;
+    }
+    .reviews-polaroid-3:hover {
+      transform: rotate(0deg) scale(1.03);
+      z-index: 10;
+    }
+    .transformed-men-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(30, 42, 56, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 10px 16px;
+      border-radius: 200px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      z-index: 8;
+    }
+    .avatar-stack-circles {
+      display: flex;
+      align-items: center;
+    }
+    .avatar-stack-circles img {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      margin-left: -8px;
+    }
+    .avatar-stack-circles img:first-child {
+      margin-left: 0;
+    }
+    .transformed-men-text {
+      font-family: var(--font-alt);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+    }
+
+    /* ==========================================================================
+       FAQ SECTION (All 11 FAQs with Wix Accordion)
+       ========================================================================== */
+    .faq-wix-strip {
+      background-color: var(--color-cream);
+      padding: 84px 24px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-inner-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .faq-header-center {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .faq-items-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .wix-faq-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .wix-faq-card:hover {
+      border-color: var(--color-slate-blue);
+    }
+    .wix-faq-question {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-dark);
+      user-select: none;
+    }
+    .wix-faq-icon {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--color-slate-blue);
+      transition: transform 0.2s ease;
+    }
+    .wix-faq-card.open .wix-faq-icon {
+      transform: rotate(45deg);
+    }
+    .wix-faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #444444;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding-top: 14px;
+    }
+    .wix-faq-card.open .wix-faq-answer {
+      display: block;
+    }
+
+    /* ==========================================================================
+       CLOSING CALL TO ACTION STRIP
+       ========================================================================== */
+    .closing-wix-strip {
+      background: var(--color-slate-blue);
+      color: #FFFFFF;
+      padding: 88px 24px;
+      text-align: center;
+      position: relative;
+    }
+    .closing-inner-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .closing-headline-big {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.25;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+    .closing-subheadline-big {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--color-sand);
+      line-height: 1.3;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+    .closing-body-p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #E2E8F0;
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+
+    /* ==========================================================================
+       WIX STANDARD FOOTER (wixui-footer)
+       Pure black footer matching reference site
+       ========================================================================== */
+    .wixui-footer {
+      background: var(--color-black-pure);
+      color: #999999;
+      padding: 50px 24px 36px;
+      font-size: 14px;
+      border-top: 1px solid #1E1E1E;
+    }
+    .wixui-footer__inner {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 22px;
+    }
+    .wixui-footer__logo img {
+      height: 52px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.95;
+    }
+    .wixui-footer__links-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .wixui-footer__link {
+      color: #CCCCCC;
+      font-size: 13.5px;
+      transition: var(--transition);
+    }
+    .wixui-footer__link:hover {
+      color: #FFFFFF;
+    }
+    .wixui-footer__phone {
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .wixui-footer__social-row {
+      display: flex;
+      gap: 14px;
+    }
+    .wixui-footer__social-row a {
+      color: #AAAAAA;
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #1C1C1E;
+      transition: var(--transition);
+    }
+    .wixui-footer__social-row a:hover {
+      color: #FFFFFF;
+      background: var(--color-slate-blue);
+    }
+    .wixui-footer__social-row svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+    .wixui-footer__copyright {
+      font-size: 12px;
+      color: #666666;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS (Mobile & Tablet)
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-inner-container,
+      .transform-inner-container,
+      .consultation-inner-container,
+      .reviews-inner-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .services-grid-top,
+      .services-grid-bottom {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+      .steps-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .wixui-horizontal-menu {
+        display: none;
+      }
+      .mobile-nav-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-headline-william {
+        font-size: 26px;
+      }
+      .hero-brand-title {
+        font-size: 32px;
+      }
+      .transform-heading {
+        font-size: 26px;
+      }
+      .services-title {
+        font-size: 30px;
+      }
+      .closing-headline-big {
+        font-size: 24px;
+      }
+      .closing-subheadline-big {
+        font-size: 18px;
+      }
+      .polaroid-collage-wrap,
+      .reviews-collage-wrap {
+        min-height: 320px;
+      }
+      .polaroid-card-1, .polaroid-card-2,
+      .reviews-polaroid-1, .reviews-polaroid-2, .reviews-polaroid-3 {
+        width: 180px;
+      }
+      .wixui-button--hero-white,
+      .wixui-button--primary {
+        width: 100%;
+      }
+    }
+  
+    /* Session Agenda Timeline Styling */
+    .session-timeline-shell {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      margin-top: 32px;
+    }
+    .session-timeline-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      border-bottom: 1px solid var(--color-border);
+      padding: 18px 24px;
+      align-items: center;
+    }
+    .session-timeline-row:last-child {
+      border-bottom: none;
+    }
+    .session-timeline-row:hover {
+      background: rgba(48, 76, 104, 0.02);
+    }
+    .time-badge {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--color-slate-blue);
+      background: rgba(48, 76, 104, 0.08);
+      padding: 6px 14px;
+      border-radius: 100px;
+      text-align: center;
+    }
+    .session-action-desc {
+      font-size: 15px;
+      color: #333333;
+      line-height: 1.5;
+    }
+    .session-action-desc strong {
+      color: var(--color-dark);
+      font-weight: 700;
+    }
+    .dating-icon-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(48, 76, 104, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      color: var(--color-slate-blue);
+    }
+    .dating-icon-circle svg {
+      width: 32px;
+      height: 32px;
+    }
+    .who-wix-strip {
+      background: var(--color-cream);
+      padding: 84px 24px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .who-inner-container {
+      max-width: var(--wix-max-width);
+      margin: 0 auto;
+    }
+    .who-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 36px;
+    }
+    @media (max-width: 860px) {
+      .who-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .who-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .who-card.highlight-card {
+      border: 2px solid var(--color-slate-blue);
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+    }
+    .who-card-eyebrow {
+      font-family: var(--font-alt);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-slate-blue);
+      margin-bottom: 12px;
+    }
+    .who-card-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .who-card-text {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: #444444;
+      margin-bottom: 24px;
+    }
+
+
+    /* ==========================================================================
+       POLISHED FAQ ACCORDION SYSTEM (FULL-WIDTH & SMOOTH TRANSITION)
+       ========================================================================== */
+    .faq-wix-strip {
+      background-color: var(--color-cream);
+      padding: 84px 24px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-inner-container {
+      max-width: 820px !important; /* Full-width within clean centered max-w-3xl */
+      margin: 0 auto !important;
+      width: 100% !important;
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
+    .faq-header-center {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .faq-items-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+    .wix-faq-card {
+      background: #FFFFFF !important;
+      border: 1px solid var(--color-border) !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    }
+    .wix-faq-card:hover {
+      border-color: rgba(48, 76, 104, 0.4) !important;
+      box-shadow: 0 4px 16px rgba(48, 76, 104, 0.06) !important;
+    }
+    .wix-faq-card.active,
+    .wix-faq-card.open {
+      border-color: var(--color-slate-blue) !important;
+      box-shadow: 0 6px 20px rgba(48, 76, 104, 0.09) !important;
+    }
+    .wix-faq-question {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 16px !important;
+      padding: 20px 24px !important;
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      cursor: pointer !important;
+      text-align: left !important;
+      font-family: var(--font-body) !important;
+      font-size: 17px !important;
+      font-weight: 700 !important;
+      color: var(--color-dark) !important;
+      box-sizing: border-box !important;
+      transition: background 0.2s ease, color 0.2s ease !important;
+      appearance: none !important;
+      -webkit-appearance: none !important;
+    }
+    .wix-faq-question:hover {
+      background: rgba(237, 232, 208, 0.15) !important;
+    }
+    .wix-faq-icon {
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 50% !important;
+      background: var(--color-cream) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 19px !important;
+      line-height: 1 !important;
+      font-weight: 600 !important;
+      color: var(--color-slate-blue) !important;
+      flex-shrink: 0 !important;
+      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease !important;
+    }
+    .wix-faq-card.active .wix-faq-icon,
+    .wix-faq-card.open .wix-faq-icon {
+      background: var(--color-slate-blue) !important;
+      color: #FFFFFF !important;
+      transform: rotate(45deg) !important;
+    }
+    .wix-faq-answer {
+      max-height: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, padding 0.35s ease !important;
+      padding: 0 24px !important;
+      font-size: 15.5px !important;
+      line-height: 1.7 !important;
+      color: #374151 !important;
+      box-sizing: border-box !important;
+      border-top: none !important;
+      display: block !important; /* Managed via max-height & opacity */
+    }
+    .wix-faq-card.active .wix-faq-answer,
+    .wix-faq-card.open .wix-faq-answer {
+      max-height: 1000px !important;
+      opacity: 1 !important;
+      padding: 4px 24px 24px !important;
+      border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+    .wix-faq-answer p {
+      margin: 0 0 12px 0 !important;
+    }
+    .wix-faq-answer p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+</style>
+</head>
+<body>
+
+  <!-- VIEWPORT SWITCHER TOOLBAR -->
+  <div class="viewport-toolbar">
+    <div class="info">
+      <div class="site-badge">WIX RESTYLED DOM</div>
+      <span>PAGE 3: <strong>6-Week 1:1 Coaching Program ($1,795)</strong></span>
+    </div>
+    <div class="modes">
+      <button class="mode-btn active" onclick="setViewport('100%', this)">Desktop</button>
+      <button class="mode-btn" onclick="setViewport('768px', this)">Tablet (768px)</button>
+      <button class="mode-btn" onclick="setViewport('375px', this)">Mobile (375px)</button>
+      <a href="index.html" class="mode-btn" style="background:#2563EB;color:#fff;border-color:#2563EB;margin-left:12px;">← All Pages Hub</a>
+    </div>
+  </div>
+
+  <div id="page-wrapper" class="preview-frame-container">
+    
+    <!-- WIX LIVE HEADER COMPONENT -->
+    <header class="wixui-header" id="comp-mj30m5sr">
+<div class="wixui-header__inner">
+<a class="wixui-header__logo" href="index.html" title="Men's Life Mastery">
+<img alt="Men's Life Mastery Logo" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png"/>
+</a>
+<nav class="wixui-horizontal-menu">
+<ul class="wixui-horizontal-menu__list">
+<li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="index.html">Home</a></li>
+<li class="wixui-horizontal-menu__item active"><a class="wixui-horizontal-menu__item-label" href="programs-pricing-overview.html">Programs &amp; Pricing</a></li>
+<li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="service-1-online-dating-course.html">Video Course</a></li>
+<li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="#our-services">1:1 Coaching</a></li>
+<li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="#faq">FAQ</a></li>
+</ul>
+<div class="wixui-header__social">
+<a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a aria-label="Facebook" href="https://facebook.com/menslifemaster" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@menslifemastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M12.525.02c1.31 0 2.6.43 3.65 1.22 1.05.78 1.8 1.88 2.15 3.14.73-.13 1.48-.13 2.2 0v3.7c-.75-.02-1.5-.16-2.2-.42v8.28c-.02 1.94-.8 3.8-2.18 5.18-1.38 1.38-3.24 2.16-5.18 2.18-1.94-.02-3.8-.8-5.18-2.18-1.38-1.38-2.16-3.24-2.18-5.18.02-1.94.8-3.8 2.18-5.18 1.38-1.38 3.24-2.16 5.18-2.18.35 0 .7.02 1.05.07V12.7c-.35-.08-.71-.12-1.07-.12-1.12.01-2.2.46-3 1.25-.8.8-1.24 1.88-1.24 3 0 1.12.45 2.2 1.24 3 .8.8 1.88 1.25 3 1.25 1.12 0 2.2-.45 3-1.25.79-.8 1.24-1.88 1.24-3V4.38c1.3.85 2.82 1.34 4.38 1.4V2.05C18.4 2 16.92 1.35 15.82.26 14.85-.7 13.84-.96 12.525.02z"></path></svg>
+</a>
+<a aria-label="X" href="https://x.com/menslifemastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a aria-label="YouTube" href="https://www.youtube.com/@menslifemastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+</div>
+<a class="wixui-button wixui-button--header" href="#discovery-call">Book a Free Consultation</a>
+</nav>
+<button aria-label="Open menu" class="mobile-nav-toggle">
+<svg viewbox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+</button>
+</div>
+</header>
+
+    <!-- 1. HERO SECTION (Screenshot Layout: Left-Aligned Large Text & Bullets | Right Dual Overlapping Mentorship Imagery) -->
+    <section class="wixui-section hero-wix-strip" id="comp-mj307itu">
+      <div class="hero-bg-media-left"></div>
+      <div class="hero-inner-container">
+        
+        <!-- Left: Brand Typography, Subheadline, Bullets & CTA Button -->
+        <div class="hero-copy-col">
+          <span class="hero-brand-subtitle">6-WEEK 1:1 COACHING PROGRAM</span>
+          <h1 class="hero-brand-title">MEN'S<br>LIFE MASTERY™</h1>
+          
+          <ul class="hero-bullet-pillars">
+            <li>Unleash Your Confidence</li>
+            <li>Unleash Your Power</li>
+            <li>Unleash Your Destiny</li>
+          </ul>
+
+          <div class="wixui-rich-text" style="margin-top: 18px;">
+            <h2 class="hero-headline-william" style="font-size: 26px; line-height: 1.25; margin-bottom: 14px;">
+              The 6-Week 1:1 Coaching Program
+            </h2>
+            <p class="hero-subheadline-william" style="font-size: 16.5px; line-height: 1.6; color: #E5E7EB; margin-bottom: 20px;">
+              Same 12 modules, same tools, same standards, twice the pace. One-on-one with Bill Cottles by video call. $1,795, with payment plans available.
+            </p>
+            <div style="display: inline-block; background: rgba(200, 155, 60, 0.18); border: 1px solid var(--color-gold); border-radius: 6px; padding: 6px 14px; color: #F4EFE0; font-size: 13.5px; font-weight: 700; margin-bottom: 24px;">
+              💳 Payment plans available (PayPal / Klarna)
+            </div>
+          </div>
+
+          <div class="hero-actions-row">
+            <a href="#discovery-call" class="wixui-button wixui-button--hero-white">
+              <span>Book Your Free Discovery Call</span>
+              <span class="wixui-button__icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </a>
+            <a href="#whats-included" class="wixui-button wixui-button--secondary">
+              <span>What's Included</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Overlapping Dual-Image Style (Dynamically adapted for 1-on-1 Mentorship & Dating Results) -->
+        <div class="hero-visual-col">
+          <div class="hero-main-photo-frame">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Confident executive coaching client - Men's Life Mastery">
+          </div>
+          <div class="hero-inset-card">
+            <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&amp;fit=crop&amp;w=600&amp;q=85" alt="Real relationship success with an attractive woman">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. OVERVIEW & PHILOSOPHY SECTION (Warm Cream + Tilted Polaroids + Pull Quote) -->
+    <section class="wixui-column-strip transform-wix-strip" id="comp-mj30qtl4">
+      <div class="transform-inner-container">
+        
+        <!-- Left Tilted Photo Cards -->
+        <div class="transform-media-col">
+          <div class="transform-photo-stack">
+            <div class="polaroid-card-1">
+              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&amp;fit=crop&amp;w=600&amp;q=85" alt="One on one strategy coaching">
+            </div>
+            <div class="polaroid-card-2">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=600&amp;q=85" alt="Dating a high-value woman">
+            </div>
+            <div class="badge-35-years">
+              <span class="badge-num">35+</span>
+              <span class="badge-text">YEARS OF REAL-WORLD EXPERIENCE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: William's Overview Copy & Philosophy Pull Quote -->
+        <div class="transform-copy-col">
+          <div class="wixui-rich-text">
+            <span class="section-eyebrow-accent">OVERVIEW</span>
+            <h2 class="section-title-kanit">Twice the Pace, Same Complete Transformation.</h2>
+          </div>
+
+          <div class="wixui-rich-text transform-body-paragraphs">
+            <p>
+              Six weeks, two modules a week, and Bill in your corner the whole way. You get the complete Men's Life Mastery system, from an honest look in the mirror to photos, a profile, openers, texting, first meets and a 90-day plan, with seven one-on-one coaching sessions to keep you honest, sharpen your skills and fix what isn't working.
+            </p>
+            <p>
+              This isn't about a few more matches or getting lucky. It's about real inner confidence, a sharper look, boundaries you can hold, and a dating life that runs on a plan instead of hope. It's no longer up to you to prove you've got what it takes to get her. It's up to her to prove she has what it takes to get you.
+            </p>
+          </div>
+
+          <!-- Exact Founder Pull Quote -->
+          <div class="quote-card-styled">
+            <div class="quote-symbol">&ldquo;</div>
+            <p class="quote-text">It's no longer up to you to prove you've got what it takes to get her. It's up to her to prove she has what it takes to get you.</p>
+            <span class="quote-author">Bill Cottles, Founder</span>
+          </div>
+
+          <div style="margin-top: 30px;">
+            <a href="#discovery-call" class="wixui-button wixui-button--primary">
+              <span>Book Your Free Discovery Call</span>
+              <span class="wixui-button__icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. WHAT'S INCLUDED SECTION (Cloned 2-Row Masonry Grid: 2 Top / 3 Bottom with Bill Cottles Backdrop) -->
+    <section class="wixui-column-strip services-wix-strip" id="whats-included">
+      <img src="https://static.wixstatic.com/media/5da33b_e7f2bc4c7c1d4aa6905795fdd5ce8148~mv2.jpg/v1/fill/w_1400,h_850,al_c,q_85,enc_avif,quality_auto/5da33b_e7f2bc4c7c1d4aa6905795fdd5ce8148~mv2.jpg" alt="Bill Cottles - Founder" class="services-founder-backdrop">
+      
+      <div class="services-inner-container">
+        <div class="services-header-center">
+          <span class="pill-tag-white">WHAT'S INCLUDED</span>
+          <h2 class="services-title">Everything Included in the <span>6-Week Program</span></h2>
+          <p class="services-subtitle">
+            Seven private video sessions, full assessments, video course access, and personal accountability.
+          </p>
+        </div>
+
+        <!-- ROW 1: 2 Centered Cards (7 Coaching Sessions & 24h Recaps) -->
+        <div class="services-grid-top">
+          
+          <!-- Card 1: 7 Coaching Sessions -->
+          <article class="wix-service-card">
+            <span class="card-vertical-tag">INCLUDED - 01</span>
+            <div class="card-content-offset">
+              <div class="dating-icon-circle">
+                <!-- Video Call / 1:1 Coaching Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 10l5-5v14l-5-5"></path>
+                  <rect x="2" y="6" width="13" height="12" rx="2"></rect>
+                </svg>
+              </div>
+              <h3 class="card-service-title">7 Coaching Sessions</h3>
+              <div class="card-service-price">75 Minutes Each</div>
+              <p class="card-service-subheadline">
+                7 one-on-one coaching sessions, 75 minutes each, by video call: two in Week 1, then one a week
+              </p>
+              <div class="card-bottom-row">
+                <a href="#discovery-call" class="card-cta-text-link">Book Discovery Call</a>
+                <a href="#discovery-call" class="card-corner-arrow-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Written Recaps -->
+          <article class="wix-service-card">
+            <span class="card-vertical-tag">INCLUDED - 02</span>
+            <div class="card-content-offset">
+              <div class="dating-icon-circle">
+                <!-- Written Recap / File Check Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3 class="card-service-title">Written Session Recaps</h3>
+              <div class="card-service-price">Within 24 Hours</div>
+              <p class="card-service-subheadline">
+                A written recap within 24 hours of every session: what we covered, your wins and your actions for the week
+              </p>
+              <div class="card-bottom-row">
+                <a href="#discovery-call" class="card-cta-text-link">Book Discovery Call</a>
+                <a href="#discovery-call" class="card-corner-arrow-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ROW 2: 3 Cards (Video Course, Assessments 3x, Audits & Plan) -->
+        <div class="services-grid-bottom">
+          
+          <!-- Card 3: Video Course Lifetime Access -->
+          <article class="wix-service-card">
+            <span class="card-vertical-tag">INCLUDED - 03</span>
+            <div class="card-content-offset">
+              <div class="dating-icon-circle">
+                <!-- Video Course Library Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+              <h3 class="card-service-title">Full Video Course</h3>
+              <div class="card-service-price">79 Lessons Vault</div>
+              <p class="card-service-subheadline">
+                Lifetime access to the Online Dating Video Course: all 79 lesson videos, so you can review any lesson, any time
+              </p>
+              <div class="card-bottom-row">
+                <a href="#discovery-call" class="card-cta-text-link">Book Discovery Call</a>
+                <a href="#discovery-call" class="card-corner-arrow-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Two Assessments Three Times -->
+          <article class="wix-service-card">
+            <span class="card-vertical-tag">INCLUDED - 04</span>
+            <div class="card-content-offset">
+              <div class="dating-icon-circle">
+                <!-- Milestones / 3x Diagnostics Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                </svg>
+              </div>
+              <h3 class="card-service-title">Assessments 3x</h3>
+              <div class="card-service-price">Intake, Mid, Final</div>
+              <p class="card-service-subheadline">
+                Your two assessments, three times: the 150-question SMV Assessment and the 100-question Dating Conduct Scenario Questionnaire at intake, midpoint (Week 4) and final review (Week 6), so you see real change
+              </p>
+              <div class="card-bottom-row">
+                <a href="#discovery-call" class="card-cta-text-link">Book Discovery Call</a>
+                <a href="#discovery-call" class="card-corner-arrow-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Audits, Booklets & 90-Day Plan -->
+          <article class="wix-service-card">
+            <span class="card-vertical-tag">INCLUDED - 05</span>
+            <div class="card-content-offset">
+              <div class="dating-icon-circle">
+                <!-- Profile Audit & 90-Day Plan Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="card-service-title">Audits &amp; 90-Day Plan</h3>
+              <div class="card-service-price">Complete Toolkit</div>
+              <p class="card-service-subheadline">
+                A personal review of your photos, profile and conversations. The 6-Week Lessons Booklet, your Client Tracker and every worksheet. A 90-day plan to keep growing after the program ends.
+              </p>
+              <div class="card-bottom-row">
+                <a href="#discovery-call" class="card-cta-text-link">Book Discovery Call</a>
+                <a href="#discovery-call" class="card-corner-arrow-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. WHO IT'S FOR & PACING (Warm Cream Section) -->
+    <section class="wixui-section who-wix-strip" id="who-its-for">
+      <div class="who-inner-container">
+        
+        <div class="services-header-center" style="margin-bottom: 20px;">
+          <span class="section-eyebrow-accent">CANDIDATE &amp; PACING</span>
+          <h2 class="section-title-kanit" style="font-size: 34px;">Who It's For &amp; Time Commitment</h2>
+        </div>
+
+        <div class="who-cards-grid">
+          
+          <!-- Card A: Who It's For -->
+          <div class="who-card">
+            <div>
+              <div class="who-card-eyebrow">TARGET CANDIDATE</div>
+              <h3 class="who-card-title">Who it's for</h3>
+              <p class="who-card-text">
+                The man who's ready to move fast and wants hands-on coaching. Casual, serious or marriage-minded, in your 20s or your 60s, new to the apps or burned out on them.
+              </p>
+            </div>
+            <div>
+              <a href="#discovery-call" class="wixui-button wixui-button--primary">
+                <span>Book Your Free Discovery Call</span>
+                <span class="wixui-button__icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card B: Pacing & Schedule -->
+          <div class="who-card highlight-card">
+            <div>
+              <div class="who-card-eyebrow">PACING &amp; ALTERNATIVE</div>
+              <h3 class="who-card-title">Time Commitment</h3>
+              <p class="who-card-text">
+                Six weeks goes fast, so plan on about 4 to 6 hours a week of module work and practice, plus 5 minutes a day. Prefer more time to practice each skill? Look at the 12-Week program.
+              </p>
+              <div style="font-size: 13.5px; color: var(--color-slate-blue); font-weight: 700; margin-bottom: 20px;">
+                💳 Payment plans available for the 6-Week Program ($1,795) via PayPal / Klarna.
+              </div>
+            </div>
+            <div>
+              <a href="service-3-twelve-week-coaching.html" class="wixui-button wixui-button--secondary" style="border-color: var(--color-slate-blue); color: var(--color-slate-blue);">
+                <span>Explore 12-Week Coaching</span>
+                <span class="wixui-button__icon-circle" style="background: var(--color-slate-blue); color: #fff;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. YOUR 6 WEEKS SCHEDULE (Curriculum Table + Button) -->
+    <section class="wixui-section compare-wix-strip" id="curriculum">
+      <div class="compare-inner-container">
+        
+        <div class="compare-header-center">
+          <span class="section-eyebrow-accent">ACCELERATED ROADMAP</span>
+          <h2 class="section-title-kanit">Two modules a week, one plan</h2>
+          <p style="color: #666; font-size: 16px; margin: 12px auto 24px;">
+            How we cover all 12 modules in 6 intensive weeks with Bill.
+          </p>
+          <a href="modules-2-six-week-program.html" class="wixui-button wixui-button--primary" style="margin: 0 auto; display: inline-flex;">
+            <span>See Every Module</span>
+            <span class="wixui-button__icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="modules-table-shell">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 90px; text-align: center;">Week</th>
+                <th style="width: 380px;">Modules</th>
+                <th>Your session with Bill</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center;"><span class="mod-num-badge">Week 1</span></td>
+                <td class="mod-name-title">1. Onboarding &bull; 2. Evaluation &amp; Gameplan</td>
+                <td class="mod-walkaway-desc">Session 1: welcome, orientation and how to complete every assessment and form. Session 2: your results, your presentation and your personal game plan.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;"><span class="mod-num-badge">Week 2</span></td>
+                <td class="mod-name-title">3. Photo Strategy &amp; Photo Production &bull; 4. Building Your Online Profile</td>
+                <td class="mod-walkaway-desc">Session 3: your new photo lineup, her side of the screen, your bio and your prompts.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;"><span class="mod-num-badge">Week 3</span></td>
+                <td class="mod-name-title">5. Launching Your Profile &bull; 6. Emotional &amp; Mental Preparation</td>
+                <td class="mod-walkaway-desc">Session 4: launch your profile, then confidence, emotional fitness, boundaries and frame.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;"><span class="mod-num-badge">Week 4</span></td>
+                <td class="mod-name-title">7. Understanding Dating Apps &bull; 8. Vetting Women</td>
+                <td class="mod-walkaway-desc">Session 5: your midpoint review, then platforms, your budget and vetting.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;"><span class="mod-num-badge">Week 5</span></td>
+                <td class="mod-name-title">9. Openers &amp; Mutual Conversation &bull; 10. Messaging &amp; Text Game, Calls, &amp; Videos</td>
+                <td class="mod-walkaway-desc">Session 6: openers, texting, calls and video calls.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;"><span class="mod-num-badge">Week 6</span></td>
+                <td class="mod-name-title">11. First Meets, Dates, &amp; Follow Throughs &bull; 12. Review &amp; 90 Day Plan</td>
+                <td class="mod-walkaway-desc">Session 7: first meets and follow-ups, your final review and your 90-day plan.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="compare-footer-banner">
+          <p>Want a detailed week-by-week deep dive into every single exercise and worksheet?</p>
+          <a href="modules-2-six-week-program.html" class="wixui-button wixui-button--primary">
+            <span>See Every Module</span>
+            <span class="wixui-button__icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. INSIDE EVERY 75-MINUTE SESSION -->
+    <section class="wixui-section" style="background: var(--color-cream); padding: 84px 24px; border-bottom: 1px solid var(--color-border);" id="session-structure">
+      <div style="max-width: var(--wix-content-width); margin: 0 auto;">
+        
+        <div class="services-header-center">
+          <span class="section-eyebrow-accent">SESSION ARCHITECTURE</span>
+          <h2 class="section-title-kanit">Inside every 75-minute session</h2>
+          <p style="color: #666; font-size: 16px; margin-top: 10px;">
+            Every coaching call follows a structured, high-accountability format to maximize your progress.
+          </p>
+        </div>
+
+        <div class="session-timeline-shell">
+          <div class="session-timeline-row">
+            <div><span class="time-badge">0 to 10 min</span></div>
+            <div class="session-action-desc">
+              Wins and progress: what went well and your numbers for the week
+            </div>
+          </div>
+          <div class="session-timeline-row">
+            <div><span class="time-badge">10 to 20 min</span></div>
+            <div class="session-action-desc">
+              Review your work: last week, and what came up in your dating life
+            </div>
+          </div>
+          <div class="session-timeline-row">
+            <div><span class="time-badge">20 to 55 min</span></div>
+            <div class="session-action-desc">
+              Coaching and practice: the skill of the week, with role-play and real examples
+            </div>
+          </div>
+          <div class="session-timeline-row">
+            <div><span class="time-badge">55 to 70 min</span></div>
+            <div class="session-action-desc">
+              Feedback: what you're doing well, where to improve, and what to adjust
+            </div>
+          </div>
+          <div class="session-timeline-row">
+            <div><span class="time-badge">70 to 75 min</span></div>
+            <div class="session-action-desc">
+              Next actions: your focus for the week ahead
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. HOW TO GET STARTED (3-Step Process) -->
+    <section class="wixui-section steps-wix-strip" id="how-to-start">
+      <div class="steps-inner-container">
+        
+        <span class="section-eyebrow-accent">HOW TO GET STARTED</span>
+        <h2 class="section-title-kanit">Three Steps to Your Coaching Transformation</h2>
+        <p style="color: #666; max-width: 650px; margin: 10px auto 0; font-size: 16px;">
+          Here is how we launch your 6-week journey with Bill.
+        </p>
+
+        <div class="steps-cards-grid">
+          
+          <div class="wix-step-card">
+            <span class="wix-step-card-num">01</span>
+            <h3 class="wix-step-card-title">Book Discovery Call</h3>
+            <p class="wix-step-card-desc">
+              Book your free discovery call. It's a 45-minute interview about where you are, what you want and what's holding you back, and whether six weeks is the right fit.
+            </p>
+          </div>
+
+          <div class="wix-step-card">
+            <span class="wix-step-card-num">02</span>
+            <h3 class="wix-step-card-title">Enroll &amp; Setup</h3>
+            <p class="wix-step-card-desc">
+              Enroll, paying in full or with a payment plan, and get your Before You Start checklist.
+            </p>
+          </div>
+
+          <div class="wix-step-card">
+            <span class="wix-step-card-num">03</span>
+            <h3 class="wix-step-card-title">Launch Week 1</h3>
+            <p class="wix-step-card-desc">
+              Week 1: complete every assessment and form, and meet with Bill twice.
+            </p>
+          </div>
+
+        </div>
+
+        <div style="margin-top: 30px;">
+          <a href="#discovery-call" class="wixui-button wixui-button--primary">
+            <span>Book Your Free Discovery Call</span>
+            <span class="wixui-button__icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. CONSULTATION BOOKING STRIP (Luxury Pool Couple + Interactive Calendar) -->
+    <section class="wixui-section consultation-wix-strip" id="discovery-call">
+      <div class="consultation-inner-container">
+        
+        <!-- Left: Image & Value Copy -->
+        <div class="consultation-copy-box">
+          <div class="consultation-photo-frame">
+            <img src="https://static.wixstatic.com/media/5da33b_f48dd8c4d84e499097163f7a2c018b2b~mv2.jpg/v1/fill/w_560,h_420,al_c,q_85,enc_avif,quality_auto/5da33b_f48dd8c4d84e499097163f7a2c018b2b~mv2.jpg" alt="Attractive couple enjoying luxury lifestyle">
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--color-dark); margin-bottom: 12px;">
+            Let's Talk About Your 6-Week Transformation
+          </h2>
+          <p>
+            Book your free discovery call. It's a 45-minute interview about where you are, what you want and what's holding you back, and whether six weeks is the right fit. No pitch, no pressure &mdash; just straight talk.
+          </p>
+          <div style="margin-top: 16px; font-size: 14px; font-weight: 700; color: var(--color-slate-blue);">
+            💳 $1,795 Investment &bull; Flexible Payment Plans Available via PayPal &amp; Klarna
+          </div>
+        </div>
+
+        <!-- Right: Wix Interactive Booking Card -->
+        <div class="wix-booking-card">
+          <h3 class="booking-card-title">Book Your <span>Free Discovery Call</span></h3>
+          <p class="booking-card-desc">45-minute private video assessment with Bill Cottles.</p>
+
+          <div class="booking-service-choice">
+            <div class="booking-radio-dot"></div>
+            <div class="booking-service-info">
+              <div class="booking-service-name">Free Discovery Call &mdash; 45 Min</div>
+              <div class="booking-service-sub">Via Zoom or Google Meet &bull; Zero Obligation</div>
+            </div>
+          </div>
+
+          <div class="booking-calendar-wrap">
+            <div class="calendar-month-row">
+              <span>November 2026</span>
+              <div style="display:flex; gap:8px;">
+                <button type="button" style="background:none; border:none; cursor:pointer; color:#666;">&lt;</button>
+                <button type="button" style="background:none; border:none; cursor:pointer; color:#666;">&gt;</button>
+              </div>
+            </div>
+            <div class="calendar-grid">
+              <div class="cal-day-head">S</div>
+              <div class="cal-day-head">M</div>
+              <div class="cal-day-head">T</div>
+              <div class="cal-day-head">W</div>
+              <div class="cal-day-head">T</div>
+              <div class="cal-day-head">F</div>
+              <div class="cal-day-head">S</div>
+              
+              <div class="cal-day disabled">26</div>
+              <div class="cal-day disabled">27</div>
+              <div class="cal-day disabled">28</div>
+              <div class="cal-day disabled">29</div>
+              <div class="cal-day disabled">30</div>
+              <div class="cal-day disabled">31</div>
+              <div class="cal-day">1</div>
+              <div class="cal-day">2</div>
+              <div class="cal-day">3</div>
+              <div class="cal-day">4</div>
+              <div class="cal-day">5</div>
+              <div class="cal-day">6</div>
+              <div class="cal-day">7</div>
+              <div class="cal-day">8</div>
+              <div class="cal-day">9</div>
+              <div class="cal-day">10</div>
+              <div class="cal-day">11</div>
+              <div class="cal-day">12</div>
+              <div class="cal-day">13</div>
+              <div class="cal-day">14</div>
+              <div class="cal-day">15</div>
+              <div class="cal-day">16</div>
+              <div class="cal-day">17</div>
+              <div class="cal-day">18</div>
+              <div class="cal-day">19</div>
+              <div class="cal-day">20</div>
+              <div class="cal-day active">21</div>
+              <div class="cal-day">22</div>
+              <div class="cal-day">23</div>
+              <div class="cal-day">24</div>
+              <div class="cal-day">25</div>
+              <div class="cal-day">26</div>
+              <div class="cal-day">27</div>
+              <div class="cal-day">28</div>
+            </div>
+          </div>
+
+          <a href="#discovery-call" class="wixui-button wixui-button--primary" style="width: 100%; justify-content: center;">
+            <span>Select A Time Slot</span>
+            <span class="wixui-button__icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. REVIEWS SECTION (Exact Screenshot Staggered Layout on #303339) -->
+    <section class="wixui-column-strip reviews-wix-strip" id="comp-mj31jp4e">
+<div class="reviews-inner-container">
+<!-- Left: Heading & Testimonial Quote Cards -->
+<div>
+<div class="reviews-header-left">
+<h2 class="reviews-main-title">REVIEWS</h2>
+<div class="reviews-eyebrow-sub">THE WORD IS OUT!</div>
+</div>
+<div class="reviews-quotes-stack">
+<!-- Review 1 (Alex P.) -->
+<div class="wix-review-card">
+<p class="review-quote-p">“Bill’s SMV session was exactly what I needed — no hype, just clear, simple steps I could try right away. Dates felt less awkward, conversations flowed, and my confidence actually grew. I’m meeting better people and enjoying the whole process again. Practical, honest, and effective.”</p>
+<div class="review-author-name">Alex P.</div>
+</div>
+<!-- Review 2 (Roberto H.) -->
+<div class="wix-review-card">
+<p class="review-quote-p">“I used to psych myself out before every date. Bill helped me get out of my head, sharpen my presentation, and understand how women actually experience me. Three weeks after updating my photos and profile, I went on three great dates. He holds you accountable.”</p>
+<div class="review-author-name">Roberto H.</div>
+</div>
+<!-- Review 3 (Rajiv P.) -->
+<div class="wix-review-card">
+<p class="review-quote-p">“Specific, practical every step of the way. Bill didn’t give me generic advice. He tore apart my photos, rebuilt my bio with specifics that got answered, and prepped me for first meets so I stopped freezing up. If you want straight talk that works, this is it.”</p>
+<div class="review-author-name">Rajiv P.</div>
+</div>
+</div>
+</div>
+<!-- Right: Polaroid Collage with Curving Dashed Line & Transformed Men Badge -->
+<div class="reviews-collage-wrap">
+<img alt="Path" class="dashed-arrow-graphic" src="https://static.wixstatic.com/media/e9f5cd_3147a87920244df483f55c81aedee1ab~mv2.png"/>
+<div class="reviews-polaroid-1">
+<img alt="Happy couple transformed" src="https://static.wixstatic.com/media/5da33b_361b684353314a958f4e236300750ad9~mv2.png"/>
+</div>
+<div class="reviews-polaroid-2">
+<img alt="Couple smiling together" src="https://static.wixstatic.com/media/5da33b_b78eff5db8184c95950c70ed9b9b74cf~mv2.png"/>
+</div>
+<div class="reviews-polaroid-3">
+<img alt="Confidence &amp; fulfillment" src="https://static.wixstatic.com/media/5da33b_f3cf5131e5984d64b54cae53d6609468~mv2.jpg"/>
+</div>
+<div class="transformed-men-badge">
+<div class="avatar-stack-circles">
+<img alt="Client 1" src="https://static.wixstatic.com/media/e9f5cd_5fe803814a6c42e39ce2697b6188674b~mv2.jpg"/>
+<img alt="Client 2" src="https://static.wixstatic.com/media/e9f5cd_9ac6be5391654965aae7987fff70fd73~mv2.jpg"/>
+<img alt="Client 3" src="https://static.wixstatic.com/media/e9f5cd_5aa6c5805ffa484bbecc93401424758e~mv2.jpg"/>
+</div>
+<span class="transformed-men-text">Hundreds of men transformed</span>
+</div>
+</div>
+</div>
+</section>
+
+    <!-- 10. FREQUENTLY ASKED QUESTIONS SECTION (Wix Accordion) -->
+    <section class="wixui-section faq-wix-strip" id="faq">
+      <div class="faq-inner-container">
+        
+        <div class="faq-header-center">
+          <span class="section-eyebrow-accent">FAQ</span>
+          <h2 class="section-title-kanit">Frequently Asked Questions</h2>
+          <p style="color: #666; font-size: 16px; margin-top: 10px;">
+            Everything you need to know about the 6-Week 1:1 Coaching Program.
+          </p>
+        </div>
+
+        <div class="faq-items-stack">
+          
+          <!-- Q1: 6 weeks or 12 weeks? -->
+          <div class="wix-faq-card active">
+            <button class="wix-faq-question" onclick="toggleFaq(this)">
+              <span>6 weeks or 12 weeks?</span>
+              <span class="wix-faq-icon">−</span>
+            </button>
+            <div class="wix-faq-answer">
+              <p>Same modules, same tools, same standards. The 6-week program moves twice as fast and needs more hours each week. The 12-week program gives you more sessions (13) and more time to practice each skill in real life.</p>
+            </div>
+          </div>
+
+          <!-- Q2: Why two sessions in Week 1? -->
+          <div class="wix-faq-card">
+            <button class="wix-faq-question" onclick="toggleFaq(this)">
+              <span>Why two sessions in Week 1?</span>
+              <span class="wix-faq-icon">+</span>
+            </button>
+            <div class="wix-faq-answer">
+              <p>Week 1 is the heaviest week. The first session gets you set up, and the second goes over your results once every assessment and form is done.</p>
+            </div>
+          </div>
+
+          <!-- Q3: How do the sessions work? -->
+          <div class="wix-faq-card">
+            <button class="wix-faq-question" onclick="toggleFaq(this)">
+              <span>How do the sessions work?</span>
+              <span class="wix-faq-icon">+</span>
+            </button>
+            <div class="wix-faq-answer">
+              <p>Every session is one-on-one with Bill by video call, on Zoom or Google Meet. Need another way to connect? Just ask.</p>
+            </div>
+          </div>
+
+          <!-- Q4: Do you offer payment plans? -->
+          <div class="wix-faq-card">
+            <button class="wix-faq-question" onclick="toggleFaq(this)">
+              <span>Do you offer payment plans?</span>
+              <span class="wix-faq-icon">+</span>
+            </button>
+            <div class="wix-faq-answer">
+              <p>Yes. We'll go over the options on your discovery call.</p>
+            </div>
+          </div>
+
+          <!-- Q5: What if I need to reschedule? -->
+          <div class="wix-faq-card">
+            <button class="wix-faq-question" onclick="toggleFaq(this)">
+              <span>What if I need to reschedule a session?</span>
+              <span class="wix-faq-icon">+</span>
+            </button>
+            <div class="wix-faq-answer">
+              <p>No problem. Just give at least 24 hours' notice.</p>
+            </div>
+          </div>
+
+          <!-- Q6: Can I cancel? -->
+          <div class="wix-faq-card">
+            <button class="wix-faq-question" onclick="toggleFaq(this)">
+              <span>Can I cancel?</span>
+              <span class="wix-faq-icon">+</span>
+            </button>
+            <div class="wix-faq-answer">
+              <p>Yes, any time before Week 1 begins.</p>
+            </div>
+          </div>
+
+          <!-- Q7: Do you guarantee results? -->
+          <div class="wix-faq-card">
+            <button class="wix-faq-question" onclick="toggleFaq(this)">
+              <span>Do you guarantee results?</span>
+              <span class="wix-faq-icon">+</span>
+            </button>
+            <div class="wix-faq-answer">
+              <p>No honest coach can promise matches, dates or a relationship. What we promise is straight talk, honest feedback, real tools and support every step of the way. Your part is to show up and do the work.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. CLOSING CALL TO ACTION SECTION (Wix Strip on #303339) -->
+    <section class="wixui-section closing-wix-strip" id="closing-cta">
+      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+        <span class="section-eyebrow-accent" style="color: var(--color-sand);">YOUR NEXT LEVEL</span>
+        <h2 class="closing-title-kanit">Six weeks from now, you could be a different man.</h2>
+        <p class="closing-body-p">
+          Relaxed, poised and confident. Not chasing, not guessing, not begging. You don't need to have it all figured out. You just need the willingness to do the work.
+        </p>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
+          <a href="#discovery-call" class="wixui-button wixui-button--hero-white" style="font-size: 16px; padding: 18px 38px;">
+            <span>Book Your Free Discovery Call</span>
+            <span class="wixui-button__icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+          <span style="color: var(--color-sand); font-size: 14.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">
+            $1,795 Total &bull; Payment plans available &bull; 7 Private Video Sessions
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIX LIVE FOOTER COMPONENT -->
+    <footer class="wixui-footer">
+<div class="wixui-footer__inner">
+<div class="wixui-footer__logo">
+<img alt="Men's Life Mastery" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png"/>
+</div>
+<div class="wixui-footer__links-row">
+<a class="wixui-footer__link" href="https://www.menslifemastery.com/privacy-policy" target="_blank">Privacy Policy</a>
+<span style="color: #444444;">•</span>
+<a class="wixui-footer__link" href="https://www.menslifemastery.com/refund-policy" target="_blank">Refund Policy</a>
+<span style="color: #444444;">•</span>
+<span class="wixui-footer__phone">(213) 348-3168</span>
+</div>
+<div class="wixui-footer__social-row">
+<a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a aria-label="Facebook" href="https://facebook.com/menslifemaster" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@menslifemastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M12.525.02c1.31 0 2.6.43 3.65 1.22 1.05.78 1.8 1.88 2.15 3.14.73-.13 1.48-.13 2.2 0v3.7c-.75-.02-1.5-.16-2.2-.42v8.28c-.02 1.94-.8 3.8-2.18 5.18-1.38 1.38-3.24 2.16-5.18 2.18-1.94-.02-3.8-.8-5.18-2.18-1.38-1.38-2.16-3.24-2.18-5.18.02-1.94.8-3.8 2.18-5.18 1.38-1.38 3.24-2.16 5.18-2.18.35 0 .7.02 1.05.07V12.7c-.35-.08-.71-.12-1.07-.12-1.12.01-2.2.46-3 1.25-.8.8-1.24 1.88-1.24 3 0 1.12.45 2.2 1.24 3 .8.8 1.88 1.25 3 1.25 1.12 0 2.2-.45 3-1.25.79-.8 1.24-1.88 1.24-3V4.38c1.3.85 2.82 1.34 4.38 1.4V2.05C18.4 2 16.92 1.35 15.82.26 14.85-.7 13.84-.96 12.525.02z"></path></svg>
+</a>
+<a aria-label="X" href="https://x.com/menslifemastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/mens-life-mastery" target="_blank">
+<svg viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+<p class="wixui-footer__copyright">Copyright © 2026 Men's Life Mastery™. All rights reserved.</p>
+</div>
+</footer>
+
+  </div>
+
+  <!-- Interactive Scripts matching Wix behavior -->
+  <script>
+    // POLISHED ACCORDION CONTROLLER (SUPPORTS BOTH BUTTON AND DIV)
+    function toggleFaq(el) {
+      const card = el.closest ? el.closest('.wix-faq-card') : el.parentElement;
+      if (!card) return;
+      const wasOpen = card.classList.contains('active') || card.classList.contains('open');
+      
+      const container = card.closest ? (card.closest('.faq-inner-container') || document) : document;
+      container.querySelectorAll('.wix-faq-card').forEach(c => {
+        c.classList.remove('active', 'open');
+        const icon = c.querySelector('.wix-faq-icon');
+        if (icon) icon.textContent = '+';
+      });
+      
+      if (!wasOpen) {
+        card.classList.add('active', 'open');
+        const icon = card.querySelector('.wix-faq-icon');
+        if (icon) icon.textContent = '−';
+      }
+    }
+
+    function setViewport(width, btn) {
+      const frame = document.getElementById('page-wrapper');
+      frame.style.width = width;
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

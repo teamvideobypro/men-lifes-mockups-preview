@@ -1,0 +1,20 @@
+# Python scratch scripts and cache
+*.py
+__pycache__/
+*.pyc
+
+# Local logs and temp data
+*.log
+*.tmp
+*.docx
+*.mhtml
+cook/
+extracted_site.html
+extracted_all_styles.css
+page*_google_doc.txt
+
+# Environment and OS
+.DS_Store
+Thumbs.db
+.env*
+.vercel

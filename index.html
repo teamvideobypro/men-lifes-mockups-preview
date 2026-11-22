@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Life Mastery &mdash; Landing Pages Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-cream: #FBF8F2;
+      --color-slate-blue: #304C68;
+      --color-slate-dark: #1F3347;
+      --color-sand: #EDE8D0;
+      --color-dark: #1A1A1A;
+      --color-border: #D8D3C8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--color-cream);
+      font-family: 'Instrument Sans', sans-serif;
+      color: var(--color-dark);
+      padding: 40px 20px 80px;
+      line-height: 1.5;
+    }
+    .hub-container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .hub-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .hub-logo {
+      height: 64px;
+      margin: 0 auto 16px;
+      display: block;
+    }
+    .hub-badge {
+      display: inline-block;
+      background: var(--color-slate-blue);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Kanit', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--color-dark);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      font-size: 16px;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hub-category-title {
+      font-family: 'Kanit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-slate-blue);
+      letter-spacing: 0.05em;
+      margin: 36px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hub-category-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 20px;
+    }
+    .preview-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+    }
+    .preview-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(48, 76, 104, 0.12);
+      border-color: var(--color-slate-blue);
+    }
+    .preview-card.active-card {
+      border: 2px solid var(--color-slate-blue);
+    }
+    .card-top {
+      margin-bottom: 16px;
+    }
+    .card-status {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .status-ready {
+      background: #D1FAE5;
+      color: #065F46;
+    }
+    .status-next {
+      background: #EFF6FF;
+      color: #1E40AF;
+    }
+    .status-queued {
+      background: #F3F4F6;
+      color: #6B7280;
+    }
+    .card-title {
+      font-family: 'Kanit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--color-dark);
+    }
+    .card-meta {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-slate-blue);
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-slate-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid #EEEEEE;
+    }
+  </style>
+</head>
+<body>
+  <div class="hub-container">
+    <div class="hub-header">
+      <img src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png" alt="Men's Life Mastery" class="hub-logo">
+      <span class="hub-badge" style="background: #D1FAE5; color: #065F46; border: 1px solid #10B981;">&#10003; All 9 Mockups Complete &bull; Review Hub</span>
+      <h1>Men's Life Mastery &mdash; 9 Landing Pages</h1>
+      <p class="subtitle">Sequential landing page generator strictly adhering to William Cottles' design brief, Wix compatibility rules, and verbatim sales copy.</p>
+    </div>
+
+    <!-- Category 1: Overview -->
+    <div class="hub-category-title">1. Overview Page</div>
+    <div class="cards-grid">
+      <a href="programs-pricing-overview.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">1. Programs &amp; Pricing Overview</h2>
+          <div class="card-meta">5 Offer Cards &bull; Comparison Table &bull; 11 FAQs</div>
+          <p class="card-desc">Hero, Philosophy, 5 Wix Offer Cards ($499, $1,795, $2,995, $399, $199), 10-row comparison table, 3-step onboarding, and full FAQ.</p>
+        </div>
+        <div class="card-btn">Open Page 1 Mockup &rarr;</div>
+      </a>
+    </div>
+
+    <!-- Category 2: 5 Offer Pages -->
+    <div class="hub-category-title">2. Offer Landing Pages (5 Pages)</div>
+    <div class="cards-grid">
+      <!-- Page 2 -->
+      <a href="service-1-online-dating-course.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">2. Online Dating Video Course</h2>
+          <div class="card-meta">Price: $499 &bull; CTA: "Enroll Now"</div>
+          <p class="card-desc">The complete 12-module system, 79 lesson videos, Lessons Booklet, SMV & Dating Conduct assessments, and 90-day plan.</p>
+        </div>
+        <div class="card-btn">Open Page 2 Mockup &rarr;</div>
+      </a>
+
+      <!-- Page 3 -->
+      <a href="service-2-six-week-coaching.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">3. 6-Week 1:1 Coaching Program</h2>
+          <div class="card-meta">Price: $1,795 &bull; CTA: "Book Your Free Discovery Call"</div>
+          <p class="card-desc">7 x 75-min sessions, 2 modules/week, lifetime course access, written recaps. Includes "Payment plans available".</p>
+        </div>
+        <div class="card-btn">Open Page 3 Mockup &rarr;</div>
+      </a>
+
+      <!-- Page 4 -->
+      <a href="service-3-twelve-week-coaching.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">4. 12-Week 1:1 Coaching Program</h2>
+          <div class="card-meta">Price: $2,995 &bull; CTA: "Book Your Free Discovery Call"</div>
+          <p class="card-desc">13 x 75-min sessions, 1 module/week, flagship transformation. Includes "Payment plans available".</p>
+        </div>
+        <div class="card-btn">Open Page 4 Mockup &rarr;</div>
+      </a>
+
+      <!-- Page 5 -->
+      <a href="service-4-coaching-session.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">5. 1:1 Coaching Session</h2>
+          <div class="card-meta">Price: $399 &bull; CTA: "Book A Session"</div>
+          <p class="card-desc">Single 60-minute private coaching video call with Bill for targeted profile, texting, or date prep.</p>
+        </div>
+        <div class="card-btn">Open Page 5 Mockup &rarr;</div>
+      </a>
+
+      <!-- Page 6 -->
+      <a href="service-5-smv-strategy-session.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">6. SMV Strategy Session</h2>
+          <div class="card-meta">Price: $199 &bull; CTA: "Book Your SMV Session"</div>
+          <p class="card-desc">150-question diagnostic assessment scored across 7 areas + 75-minute one-on-one video call results review.</p>
+        </div>
+        <div class="card-btn">Open Page 6 Mockup &rarr;</div>
+      </a>
+    </div>
+
+    <!-- Category 3: 3 Module Description Pages -->
+    <div class="hub-category-title">3. Module Description Pages (3 Pages)</div>
+    <div class="cards-grid">
+      <!-- Page 7 -->
+      <a href="modules-1-video-course.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">7. Video Course &mdash; Module Descriptions</h2>
+          <div class="card-meta">Curriculum Detail &bull; 12 Modules / 79 Lessons</div>
+          <p class="card-desc">In-depth breakdown of every lesson video, downloadable worksheet, and tool included in the course.</p>
+        </div>
+        <div class="card-btn">Open Page 7 Mockup &rarr;</div>
+      </a>
+
+      <!-- Page 8 -->
+      <a href="modules-2-six-week-program.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">8. 6-Week Program &mdash; Module Descriptions</h2>
+          <div class="card-meta">Price: $1,795 &bull; 7 Sessions &bull; 2 Modules/Week</div>
+          <p class="card-desc">Weekly structure, dual-module breakdown per week, homework, and session-by-session roadmap.</p>
+        </div>
+        <div class="card-btn">Open Page 8 Mockup &rarr;</div>
+      </a>
+
+      <!-- Page 9 -->
+      <a href="modules-3-twelve-week-program.html" class="preview-card active-card">
+        <div class="card-top">
+          <span class="card-status status-ready">&#10003; Ready for Review</span>
+          <h2 class="card-title">9. 12-Week Program &mdash; Module Descriptions</h2>
+          <div class="card-meta">Price: $2,995 &bull; 13 Sessions &bull; 1 Module/Week</div>
+          <p class="card-desc">Full 12-week comprehensive transformation curriculum, intake, midpoint review, and 90-day plan.</p>
+        </div>
+        <div class="card-btn">Open Page 9 Mockup &rarr;</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
