@@ -129,7 +129,7 @@
       background-color: var(--color-black-pure);
       border-bottom: 1px solid #1E1E1E;
       position: sticky;
-      top: 45px;
+      top: 0px;
       z-index: 999;
       width: 100%;
     }
@@ -1534,8 +1534,8 @@
       background: #FFFFFF;
       border-bottom: 1px solid var(--color-border);
       padding: 18px 24px;
-      position: sticky;
-      top: 45px;
+      position: relative;
+      top: 0px;
       z-index: 900;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
     }
@@ -1895,7 +1895,7 @@
 
     /* Integration adjustments for Curriculum */
     .quicknav-strip {
-      top: 45px;
+      top: 0px;
       z-index: 900;
     }
     .quicknav-tabs {
@@ -2250,10 +2250,148 @@
     }
 
 </style>
+<style>
+    /* ==========================================================================
+       GLOBAL STRICT SVG & MEDIA DEFENSE (PREVENTS SVG EXPANSION BUG)
+       ========================================================================== */
+    svg {
+      max-width: 100%;
+      box-sizing: content-box;
+    }
+    .wixui-header__social svg,
+    .wixui-footer__social-row svg,
+    .footer-social-row svg {
+      width: 16px !important;
+      height: 16px !important;
+      max-width: 16px !important;
+      max-height: 16px !important;
+      display: inline-block !important;
+    }
+    .mobile-nav-toggle svg {
+      width: 24px !important;
+      height: 24px !important;
+      max-width: 24px !important;
+      max-height: 24px !important;
+    }
+    .wixui-button__icon-circle svg {
+      width: 14px !important;
+      height: 14px !important;
+      max-width: 14px !important;
+      max-height: 14px !important;
+    }
+    .session-icon-box svg,
+    .bill-session-box svg {
+      width: 22px !important;
+      height: 22px !important;
+      max-width: 22px !important;
+      max-height: 22px !important;
+      fill: #FFFFFF !important;
+      display: block !important;
+    }
+    .module-lessons-header svg,
+    .lessons-container-header svg,
+    .card-lessons-header svg {
+      width: 15px !important;
+      height: 15px !important;
+      max-width: 15px !important;
+      max-height: 15px !important;
+      fill: var(--color-slate-blue) !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+    }
+    .due-callout-box svg,
+    .due-icon,
+    .deliverable-box svg,
+    .build-deliverable-box svg {
+      width: 18px !important;
+      height: 18px !important;
+      max-width: 18px !important;
+      max-height: 18px !important;
+      fill: #059669 !important;
+      display: inline-block !important;
+      flex-shrink: 0 !important;
+    }
+    .module-video-badge svg {
+      width: 14px !important;
+      height: 14px !important;
+      max-width: 14px !important;
+      max-height: 14px !important;
+      display: inline-block !important;
+    }
+    .feature-check-icon svg,
+    .checkmark-icon svg {
+      width: 16px !important;
+      height: 16px !important;
+      max-width: 16px !important;
+      max-height: 16px !important;
+    }
+</style>
+<style>
+    /* ==========================================================================
+       STABLE NON-OVERLAPPING QUICKNAV STRIP (CONTAINED IN-FLOW)
+       ========================================================================== */
+    .quicknav-strip {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid var(--color-border) !important;
+      padding: 16px 24px !important;
+      position: relative !important; /* Normal document flow: scrolls away naturally */
+      top: auto !important;
+      z-index: 10 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .quicknav-inner {
+      max-width: var(--wix-content-width) !important;
+      margin: 0 auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 16px 24px !important;
+      flex-wrap: wrap !important;
+      box-sizing: border-box !important;
+    }
+    .quicknav-label {
+      font-family: var(--font-alt) !important;
+      font-size: 12px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.1em !important;
+      color: var(--color-slate-blue) !important;
+      margin-right: 4px !important;
+    }
+    .quicknav-tabs {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+      flex: 1 !important;
+    }
+    .quicknav-strip .wixui-button {
+      flex-shrink: 0 !important;
+      white-space: nowrap !important;
+      margin: 0 !important;
+      position: static !important;
+    }
+    @media (max-width: 768px) {
+      .quicknav-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+      }
+      .quicknav-tabs {
+        width: 100% !important;
+        overflow-x: auto !important;
+        padding-bottom: 6px !important;
+        flex-wrap: nowrap !important;
+      }
+      .quicknav-strip .wixui-button {
+        width: 100% !important;
+      }
+    }
+</style>
 </head>
 <body>
-<!-- VIEWPORT SWITCHER TOOLBAR -->
-
 <div class="page-main-wrapper" id="page-wrapper">
 <!-- WIX LIVE HEADER COMPONENT -->
 <header class="wixui-header" id="comp-mj30m5sr">
@@ -2271,25 +2409,25 @@
 </ul>
 <div class="wixui-header__social">
 <a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
 </a>
 <a aria-label="Facebook" href="https://facebook.com/menslifemaster" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
 </a>
 <a aria-label="TikTok" href="https://www.tiktok.com/@menslifemastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M12.525.02c1.31 0 2.6.43 3.65 1.22 1.05.78 1.8 1.88 2.15 3.14.73-.13 1.48-.13 2.2 0v3.7c-.75-.02-1.5-.16-2.2-.42v8.28c-.02 1.94-.8 3.8-2.18 5.18-1.38 1.38-3.24 2.16-5.18 2.18-1.94-.02-3.8-.8-5.18-2.18-1.38-1.38-2.16-3.24-2.18-5.18.02-1.94.8-3.8 2.18-5.18 1.38-1.38 3.24-2.16 5.18-2.18.35 0 .7.02 1.05.07V12.7c-.35-.08-.71-.12-1.07-.12-1.12.01-2.2.46-3 1.25-.8.8-1.24 1.88-1.24 3 0 1.12.45 2.2 1.24 3 .8.8 1.88 1.25 3 1.25 1.12 0 2.2-.45 3-1.25.79-.8 1.24-1.88 1.24-3V4.38c1.3.85 2.82 1.34 4.38 1.4V2.05C18.4 2 16.92 1.35 15.82.26 14.85-.7 13.84-.96 12.525.02z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M12.525.02c1.31 0 2.6.43 3.65 1.22 1.05.78 1.8 1.88 2.15 3.14.73-.13 1.48-.13 2.2 0v3.7c-.75-.02-1.5-.16-2.2-.42v8.28c-.02 1.94-.8 3.8-2.18 5.18-1.38 1.38-3.24 2.16-5.18 2.18-1.94-.02-3.8-.8-5.18-2.18-1.38-1.38-2.16-3.24-2.18-5.18.02-1.94.8-3.8 2.18-5.18 1.38-1.38 3.24-2.16 5.18-2.18.35 0 .7.02 1.05.07V12.7c-.35-.08-.71-.12-1.07-.12-1.12.01-2.2.46-3 1.25-.8.8-1.24 1.88-1.24 3 0 1.12.45 2.2 1.24 3 .8.8 1.88 1.25 3 1.25 1.12 0 2.2-.45 3-1.25.79-.8 1.24-1.88 1.24-3V4.38c1.3.85 2.82 1.34 4.38 1.4V2.05C18.4 2 16.92 1.35 15.82.26 14.85-.7 13.84-.96 12.525.02z"></path></svg>
 </a>
 <a aria-label="X" href="https://x.com/menslifemastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
 </a>
 <a aria-label="YouTube" href="https://www.youtube.com/@menslifemastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
 </a>
 </div>
 <a class="wixui-button wixui-button--header" href="#discovery-call">Book Your Free Discovery Call</a>
 </nav>
 <button aria-label="Open menu" class="mobile-nav-toggle">
-<svg viewbox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+<svg height="24" viewbox="0 0 24 24" width="24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
 </button>
 </div>
 </header>
@@ -2321,7 +2459,7 @@
 <a class="wixui-button wixui-button--hero-white" href="#enroll">
 <span>Enroll Now: $499</span>
 <span class="wixui-button__icon-circle">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
 <line x1="5" x2="19" y1="12" y2="12"></line>
 <polyline points="12 5 19 12 12 19"></polyline>
 </svg>
@@ -2413,7 +2551,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Preparation</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     3 Lesson Videos
                   </span>
 </div>
@@ -2423,7 +2561,7 @@
 <p class="module-body-p">Get set up before Module 1. Bill welcomes you, walks you through every form and assessment, and helps you set up your project folder and trackers, so nothing slows you down once the real work starts.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (3)
               </div>
 <div class="lesson-grid">
@@ -2449,7 +2587,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 1</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     5 Lesson Videos
                   </span>
 </div>
@@ -2459,7 +2597,7 @@
 <p class="module-body-p">Everything starts with you. You can't have the healthy relationship you want with someone else until you have a healthy relationship with yourself. You take an honest inventory with your Client Profile and two assessments, learn how dating works from the first swipe to a relationship, and name exactly what you want.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (5)
               </div>
 <div class="lesson-grid">
@@ -2486,7 +2624,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">a written dating goal, your standards and an honest starting point.</div>
@@ -2500,7 +2638,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 2</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     8 Lesson Videos
                   </span>
 </div>
@@ -2510,7 +2648,7 @@
 <p class="module-body-p">Read your results like a coach, not a judge. You find the one bottleneck holding you back and build a plan for your presentation and habits. Then you sharpen the whole man: responsibility, lifestyle, grooming, clothing and the energy you bring into a room.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (8)
               </div>
 <div class="lesson-grid">
@@ -2549,7 +2687,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">your bottleneck, a 30-day presentation plan and a personal game plan with three priorities, dates and a budget.</div>
@@ -2563,7 +2701,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 3</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     6 Lesson Videos
                   </span>
 </div>
@@ -2573,7 +2711,7 @@
 <p class="module-body-p">Photos are the gatekeeper. They're the first thing she sees, and they usually decide whether she reads anything else. You audit your current photos, plan the story you want them to tell, and shoot a new set the right way: setup, prep, light and the six shots every profile needs. Then you choose your best and put them in order.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (6)
               </div>
 <div class="lesson-grid">
@@ -2604,7 +2742,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">a shoot brief and a new photo lineup in the right order.</div>
@@ -2618,7 +2756,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 4</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     5 Lesson Videos
                   </span>
 </div>
@@ -2628,7 +2766,7 @@
 <p class="module-body-p">See your profile the way she sees it. Then write the words that turn a glance at your photos into a reason to start a conversation. You learn which messages get answered and which get ignored, why your hobbies and skills are your secret advantage, how to write a bio and prompts with real specifics, and why your real age, owned with pride, works in your favor.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (5)
               </div>
 <div class="lesson-grid">
@@ -2655,7 +2793,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">a bio, prompts and an honest statement of what you want.</div>
@@ -2683,7 +2821,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 5</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     2 Lesson Videos
                   </span>
 </div>
@@ -2693,7 +2831,7 @@
 <p class="module-body-p">Everything you built in Modules 2 to 4 goes live. You assemble and launch a complete profile, run a privacy check, and set up a simple way to test one change at a time, so you learn what works instead of guessing.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (2)
               </div>
 <div class="lesson-grid">
@@ -2708,7 +2846,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">a complete, live profile and a change log.</div>
@@ -2722,7 +2860,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 6</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     7 Lesson Videos
                   </span>
 </div>
@@ -2732,7 +2870,7 @@
 <p class="module-body-p">Your profile is live, and how you handle attention, silence and rejection shapes everything that follows. You build confidence grounded in what you do, learn to feel it without texting it, set boundaries on your time, money and self-respect, and hold your frame even when the attraction is strong. You also get a straight look at the red, blue, purple and black pill ideas, what each gets right, and the Men's Life Mastery way.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (7)
               </div>
 <div class="lesson-grid">
@@ -2767,7 +2905,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">your boundary responses and a discipline routine.</div>
@@ -2781,7 +2919,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 7</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     6 Lesson Videos
                   </span>
 </div>
@@ -2791,7 +2929,7 @@
 <p class="module-body-p">The second half starts with an honest look at your progress. Then you see how attention really works on the apps, why most men stay invisible while a few stand out, and what the competition actually looks like. You choose one or two platforms that fit your goal, and set a time and money budget before you pay for any features.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (6)
               </div>
 <div class="lesson-grid">
@@ -2822,7 +2960,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">your platform choice and a time and money budget.</div>
@@ -2836,7 +2974,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 8</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     10 Lesson Videos
                   </span>
 </div>
@@ -2846,7 +2984,7 @@
 <p class="module-body-p">Don't accept her just because she accepts you. Dating is a two-way interview, and you're choosing too. You learn to talk naturally about intentions and lifestyle, watch for honesty, respect and follow-through, verify the basics for a safe meet, and decide whether to proceed, pause or exit. You also learn the green flags, the red flags, the flags she's reading in you, and the honest truth about hypergamy: what women weigh, and how to clear the bar without chasing the ladder.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (10)
               </div>
 <div class="lesson-grid">
@@ -2893,7 +3031,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">a compatibility worksheet and a clear next decision for every match.</div>
@@ -2921,7 +3059,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 9</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     4 Lesson Videos
                   </span>
 </div>
@@ -2931,7 +3069,7 @@
 <p class="module-body-p">The first of three modules that take you from the first message to the first meet. You write openers that fit her profile, balance sharing with asking, bring warmth and humor, and read whether she's really participating. Good conversation runs both ways, and it's where interest grows or fades.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (4)
               </div>
 <div class="lesson-grid">
@@ -2954,7 +3092,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">personalized openers and conversation practice.</div>
@@ -2968,7 +3106,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 10</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     6 Lesson Videos
                   </span>
 </div>
@@ -2978,7 +3116,7 @@
 <p class="module-body-p">This is where most promising matches stall. You learn to text with a purpose, keep the pace mutual, follow up without chasing, respond calmly to hesitation, know when to stop, and use a short call or video call to move things toward a meet.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (6)
               </div>
 <div class="lesson-grid">
@@ -3009,7 +3147,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">your texting decisions, response practice and a call outline.</div>
@@ -3023,7 +3161,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 11</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     13 Lesson Videos
                   </span>
 </div>
@@ -3033,7 +3171,7 @@
 <p class="module-body-p">Online interest becomes an in-person meeting. You make a clear invitation, plan a public, affordable first meet, handle confirming and rescheduling, and show up prepared. You learn the magic of listening, how to handle confidence tests and touchy subjects with class, how to talk about your ex, how to end the meeting with respect, and how to follow up honestly. And we cover the elephant in the room: sex, consent, and knowing your app.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (13)
               </div>
 <div class="lesson-grid">
@@ -3092,7 +3230,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">a first-meet plan, a date reflection and follow-up drafts.</div>
@@ -3106,7 +3244,7 @@
 <div class="module-badge-row">
 <span class="module-id-badge">Module 12</span>
 <span class="module-video-badge">
-<svg viewbox="0 0 24 24"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
+<svg height="14" viewbox="0 0 24 24" width="14"><path d="M4 6.47v11.06c0 .76.82 1.23 1.48.85l9.54-5.53c.66-.38.66-1.33 0-1.71L5.48 5.62c-.66-.38-1.48.09-1.48.85zM18 6v12h2V6h-2z"></path></svg>
                     4 Lesson Videos
                   </span>
 </div>
@@ -3116,7 +3254,7 @@
 <p class="module-body-p">The finish line. You measure how far you've come with the same yardstick you started with, learn to judge your decisions and not just your results, get ready for the conversation about where a relationship is going, and build a 90-day plan that keeps the man growing after the course ends.</p>
 <div class="lessons-container">
 <div class="lessons-container-header">
-<svg viewbox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
+<svg height="15" viewbox="0 0 24 24" width="15"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"></path></svg>
                 Lesson videos (4)
               </div>
 <div class="lesson-grid">
@@ -3139,7 +3277,7 @@
 </div>
 </div>
 <div class="deliverable-box">
-<svg class="deliverable-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+<svg class="deliverable-icon" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
 <div>
 <span class="deliverable-label">You walk away with:</span>
 <div class="deliverable-content">your final review and a 90-day maintenance plan.</div>
@@ -3213,7 +3351,7 @@
 <a class="wixui-button wixui-button--hero-white" href="#enroll" style="font-size: 16px; padding: 18px 38px;">
 <span>Enroll Now: $499</span>
 <span class="wixui-button__icon-circle">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
 <line x1="5" x2="19" y1="12" y2="12"></line>
 <polyline points="12 5 19 12 12 19"></polyline>
 </svg>
@@ -3241,19 +3379,19 @@
 </div>
 <div class="wixui-footer__social-row">
 <a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
 </a>
 <a aria-label="Facebook" href="https://facebook.com/menslifemaster" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
 </a>
 <a aria-label="TikTok" href="https://www.tiktok.com/@menslifemastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M12.525.02c1.31 0 2.6.43 3.65 1.22 1.05.78 1.8 1.88 2.15 3.14.73-.13 1.48-.13 2.2 0v3.7c-.75-.02-1.5-.16-2.2-.42v8.28c-.02 1.94-.8 3.8-2.18 5.18-1.38 1.38-3.24 2.16-5.18 2.18-1.94-.02-3.8-.8-5.18-2.18-1.38-1.38-2.16-3.24-2.18-5.18.02-1.94.8-3.8 2.18-5.18 1.38-1.38 3.24-2.16 5.18-2.18.35 0 .7.02 1.05.07V12.7c-.35-.08-.71-.12-1.07-.12-1.12.01-2.2.46-3 1.25-.8.8-1.24 1.88-1.24 3 0 1.12.45 2.2 1.24 3 .8.8 1.88 1.25 3 1.25 1.12 0 2.2-.45 3-1.25.79-.8 1.24-1.88 1.24-3V4.38c1.3.85 2.82 1.34 4.38 1.4V2.05C18.4 2 16.92 1.35 15.82.26 14.85-.7 13.84-.96 12.525.02z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M12.525.02c1.31 0 2.6.43 3.65 1.22 1.05.78 1.8 1.88 2.15 3.14.73-.13 1.48-.13 2.2 0v3.7c-.75-.02-1.5-.16-2.2-.42v8.28c-.02 1.94-.8 3.8-2.18 5.18-1.38 1.38-3.24 2.16-5.18 2.18-1.94-.02-3.8-.8-5.18-2.18-1.38-1.38-2.16-3.24-2.18-5.18.02-1.94.8-3.8 2.18-5.18 1.38-1.38 3.24-2.16 5.18-2.18.35 0 .7.02 1.05.07V12.7c-.35-.08-.71-.12-1.07-.12-1.12.01-2.2.46-3 1.25-.8.8-1.24 1.88-1.24 3 0 1.12.45 2.2 1.24 3 .8.8 1.88 1.25 3 1.25 1.12 0 2.2-.45 3-1.25.79-.8 1.24-1.88 1.24-3V4.38c1.3.85 2.82 1.34 4.38 1.4V2.05C18.4 2 16.92 1.35 15.82.26 14.85-.7 13.84-.96 12.525.02z"></path></svg>
 </a>
 <a aria-label="X" href="https://x.com/menslifemastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
 </a>
 <a aria-label="LinkedIn" href="https://www.linkedin.com/company/mens-life-mastery" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<svg height="16" viewbox="0 0 24 24" width="16"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
 </a>
 </div>
 <p class="wixui-footer__copyright">Copyright © 2026 Men's Life Mastery™. All rights reserved.</p>
@@ -3261,6 +3399,5 @@
 </footer>
 </div>
 <!-- Interactive Scripts matching Wix behavior -->
-
 </body>
 </html>
