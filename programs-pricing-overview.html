@@ -78,61 +78,11 @@
     }
 
     
-    .mode-btn {
-      background: transparent;
-      border: none;
-      color: #9CA3AF;
-      padding: 5px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.15s ease;
-    }
-    .mode-btn:hover {
-      color: #FFFFFF;
-    }
-    .mode-btn.active {
-      background: var(--color-slate-blue);
-      color: #FFFFFF;
-    }
-    .preview-frame-container {
-      width: 100%;
-      transition: max-width 0.3s ease, margin 0.3s ease;
-      background: var(--color-hero-bg);
-    }
-    body.view-mobile .preview-frame-container {
-      max-width: 390px;
-      margin: 30px auto;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-      border-radius: 36px;
-      overflow: hidden;
-      border: 10px solid #1F2937;
-    }
-    body.view-tablet .preview-frame-container {
-      max-width: 768px;
-      margin: 30px auto;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
-      overflow: hidden;
-      border: 8px solid #1F2937;
-    }
-
-    /* ==========================================================================
-       WIX STANDARD HEADER (wixui-header)
-       Black header with white logo & social icons matching screenshot
-       ========================================================================== */
-    .wixui-header {
-      background-color: var(--color-black-pure);
-      border-bottom: 1px solid #1E1E1E;
-      position: sticky;
-      top: 0px;
-      z-index: 999;
-      width: 100%;
-    }
+    
+    
+    
+    
+    
     .wixui-header__inner {
       max-width: var(--wix-max-width);
       margin: 0 auto;
@@ -3132,12 +3082,7 @@
 </div>
 <!-- Interactive Scripts -->
 <script>
-    // Viewport Mode Switcher (Desktop / Tablet / Mobile)
-    function setMode(mode) {
-      document.body.className = 'view-' + mode;
-      document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
-      document.getElementById('btn-' + mode).classList.add('active');
-    }
+    
 
     // FAQ Accordion Toggle
     // POLISHED ACCORDION CONTROLLER (SUPPORTS BOTH BUTTON AND DIV)
