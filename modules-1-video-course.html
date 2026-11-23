@@ -1,16 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Course Module Descriptions | Men's Life Mastery</title>
-  
-  <!-- Google Fonts & Custom Web Fonts matching reference site -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Video Course Module Descriptions | Men's Life Mastery</title>
+<!-- Google Fonts & Custom Web Fonts matching reference site -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
     /* ==========================================================================
        WIX DESIGN SYSTEM & SKELETON CLASSES
        Platform: Wix Compatible Architecture
@@ -78,45 +77,7 @@
       transition: var(--transition);
     }
 
-    /* ==========================================================================
-       VIEWPORT SWITCHER TOOLBAR (Review Helper)
-       ========================================================================== */
-    .viewport-toolbar {
-      position: sticky;
-      top: 0;
-      z-index: 100000;
-      background: #111827;
-      color: #E5E7EB;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #374151;
-      font-size: 13px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-    .viewport-toolbar .info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .viewport-toolbar .pill {
-      background: var(--color-slate-blue);
-      color: #fff;
-      font-weight: 700;
-      font-size: 11px;
-      text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 4px;
-      letter-spacing: 0.05em;
-    }
-    .viewport-toolbar .modes {
-      display: flex;
-      gap: 8px;
-      background: #1F2937;
-      padding: 3px;
-      border-radius: 6px;
-    }
+    
     .mode-btn {
       background: transparent;
       border: none;
@@ -2072,28 +2033,230 @@
     .bill-session-box svg { width: 18px !important; height: 18px !important; fill: var(--color-slate-blue) !important; flex-shrink: 0 !important; }
     .build-deliverable-box svg { width: 16px !important; height: 16px !important; fill: #059669 !important; flex-shrink: 0 !important; }
 
+
+    /* ==========================================================================
+       GLOBAL REVISION PROTOCOL ENHANCEMENTS (ALL PAGES)
+       ========================================================================== */
+    /* 1. Full-width client UI (remove mockup wrapper frames) */
+    .page-main-wrapper,
+    .preview-frame-container,
+    #page-wrapper,
+    #frameContainer {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      overflow-x: hidden !important;
+      background: transparent !important;
+    }
+
+    /* 2. Overview Section 2-Column Non-Overlapping Layout */
+    .transform-wix-strip {
+      background: var(--color-cream) !important;
+      padding: 96px 24px !important;
+      border-bottom: 1px solid var(--color-border) !important;
+      position: relative !important;
+      overflow: visible !important;
+    }
+    .transform-inner-container {
+      max-width: var(--wix-max-width) !important;
+      margin: 0 auto !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 64px !important;
+      align-items: center !important;
+    }
+    .transform-copy-col {
+      padding-left: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      max-width: 580px !important;
+    }
+    .transform-heading,
+    .section-title-kanit {
+      font-family: var(--font-display) !important;
+      font-size: 38px !important;
+      font-weight: 800 !important;
+      color: var(--color-dark-pure) !important;
+      line-height: 1.2 !important;
+      margin-bottom: 20px !important;
+      letter-spacing: -0.01em !important;
+    }
+    .transform-body,
+    .transform-body-paragraphs p {
+      font-size: 17.5px !important;
+      line-height: 1.7 !important;
+      color: #2E2E2E !important;
+      margin-bottom: 20px !important;
+    }
+    .quote-card-styled {
+      background: #FFFFFF !important;
+      border-left: 5px solid var(--color-slate-blue) !important;
+      padding: 24px 28px !important;
+      border-radius: 0 12px 12px 0 !important;
+      box-shadow: 0 4px 16px rgba(48, 76, 104, 0.05) !important;
+      margin-bottom: 28px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      overflow: visible !important;
+    }
+    .quote-text,
+    .quote-text-styled {
+      font-family: var(--font-body) !important;
+      font-size: 18.5px !important;
+      font-weight: 600 !important;
+      font-style: italic !important;
+      color: var(--color-dark) !important;
+      line-height: 1.5 !important;
+      margin-bottom: 8px !important;
+      word-wrap: break-word !important;
+    }
+    .quote-author,
+    .quote-author-styled {
+      font-family: var(--font-alt) !important;
+      font-size: 13.5px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.1em !important;
+      color: var(--color-slate-blue) !important;
+    }
+
+    /* Contained Photo Stack */
+    .transform-photo-stack,
+    .polaroid-collage-wrap {
+      position: relative !important;
+      min-height: 420px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+    }
+    .polaroid-card-1 {
+      position: absolute !important;
+      top: 15px !important;
+      left: 15px !important;
+      width: 240px !important;
+      background: #FFFFFF !important;
+      padding: 12px 12px 36px !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+      border-radius: 6px !important;
+      transform: rotate(-4deg) !important;
+      z-index: 2 !important;
+    }
+    .polaroid-card-2 {
+      position: absolute !important;
+      bottom: 20px !important;
+      right: 25px !important;
+      width: 230px !important;
+      background: #FFFFFF !important;
+      padding: 12px 12px 36px !important;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15) !important;
+      border-radius: 6px !important;
+      transform: rotate(5deg) !important;
+      z-index: 4 !important;
+    }
+    .badge-35-years,
+    .expertise-badge-pill {
+      position: absolute !important;
+      bottom: 15px !important;
+      left: 25px !important;
+      background: #FFFFFF !important;
+      border: 1px solid var(--color-border) !important;
+      padding: 12px 20px !important;
+      border-radius: 10px !important;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12) !important;
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 10px !important;
+      z-index: 8 !important;
+    }
+    .badge-num,
+    .expertise-num {
+      font-family: var(--font-display) !important;
+      font-size: 28px !important;
+      font-weight: 800 !important;
+      color: var(--color-slate-blue) !important;
+      line-height: 1 !important;
+    }
+    .badge-text,
+    .expertise-label {
+      font-family: var(--font-alt) !important;
+      font-size: 11.5px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      color: var(--color-dark) !important;
+      line-height: 1.25 !important;
+    }
+
+    /* 3. Typography Upgrade Across All Cards & Modules (min 16px) */
+    .card-service-subheadline,
+    .card-service-desc,
+    .module-card-body,
+    .wix-card-desc,
+    .smv-pillar-desc {
+      font-size: 16px !important;
+      line-height: 1.65 !important;
+      color: #374151 !important;
+    }
+    .card-service-bullets li,
+    .wix-card-bullets li,
+    .module-lessons-list li {
+      font-size: 15.5px !important;
+      line-height: 1.6 !important;
+      color: #2E2E2E !important;
+    }
+    .review-quote-p {
+      font-size: 16.5px !important;
+      line-height: 1.7 !important;
+      color: #2E2E2E !important;
+    }
+    .review-author-name {
+      font-size: 14.5px !important;
+      font-weight: 700 !important;
+      color: var(--color-slate-blue) !important;
+    }
+
+    /* 4. Single Prominent CTA Under Card Grids */
+    .services-global-cta-wrapper {
+      text-align: center !important;
+      margin-top: 52px !important;
+      width: 100% !important;
+    }
+
+    /* 5. Mobile Responsive Safeguards */
+    @media (max-width: 992px) {
+      .transform-inner-container {
+        grid-template-columns: 1fr !important;
+        gap: 48px !important;
+      }
+      .transform-photo-stack,
+      .polaroid-collage-wrap {
+        min-height: 360px !important;
+        max-width: 440px !important;
+        margin: 0 auto !important;
+      }
+      .polaroid-card-1 { width: 190px !important; }
+      .polaroid-card-2 { width: 185px !important; }
+    }
+    @media (max-width: 640px) {
+      .transform-wix-strip { padding: 60px 16px !important; }
+      .transform-heading, .section-title-kanit { font-size: 28px !important; }
+      .transform-body, .transform-body-paragraphs p { font-size: 16px !important; }
+    }
+
 </style>
 </head>
 <body>
+<!-- VIEWPORT SWITCHER TOOLBAR -->
 
-  <!-- VIEWPORT SWITCHER TOOLBAR -->
-  <div class="viewport-toolbar">
-    <div class="info">
-      <div class="site-badge">WIX RESTYLED DOM</div>
-      <span>PAGE 7: <strong>Video Course &mdash; Module Descriptions (12 Modules, 79 Lessons)</strong></span>
-    </div>
-    <div class="modes">
-      <button class="mode-btn active" onclick="setViewport('100%', this)">Desktop</button>
-      <button class="mode-btn" onclick="setViewport('768px', this)">Tablet (768px)</button>
-      <button class="mode-btn" onclick="setViewport('375px', this)">Mobile (375px)</button>
-      <a href="index.html" class="mode-btn" style="background:#2563EB;color:#fff;border-color:#2563EB;margin-left:12px;">← All Pages Hub</a>
-    </div>
-  </div>
-
-  <div id="page-wrapper" class="preview-frame-container">
-    
-    <!-- WIX LIVE HEADER COMPONENT -->
-    <header class="wixui-header" id="comp-mj30m5sr">
+<div class="page-main-wrapper" id="page-wrapper">
+<!-- WIX LIVE HEADER COMPONENT -->
+<header class="wixui-header" id="comp-mj30m5sr">
 <div class="wixui-header__inner">
 <a class="wixui-header__logo" href="index.html" title="Men's Life Mastery">
 <img alt="Men's Life Mastery Logo" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png"/>
@@ -2123,127 +2286,116 @@
 <svg viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
 </a>
 </div>
-<a class="wixui-button wixui-button--header" href="#discovery-call">Book a Free Consultation</a>
+<a class="wixui-button wixui-button--header" href="#discovery-call">Book Your Free Discovery Call</a>
 </nav>
 <button aria-label="Open menu" class="mobile-nav-toggle">
 <svg viewbox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
 </button>
 </div>
 </header>
-
-    <!-- 1. HERO SECTION (Screenshot Layout: Left-Aligned Large Text & Bullets | Right Dual Overlapping Session Imagery) -->
-    <section class="wixui-section hero-wix-strip" id="comp-mj307itu">
-      <div class="hero-bg-media-left"></div>
-      <div class="hero-inner-container">
-        
-        <!-- Left: Brand Typography, Subheadline, Bullets & CTA Button -->
-        <div class="hero-copy-col">
-          <span class="hero-brand-subtitle">COMPREHENSIVE 79-LESSON CURRICULUM</span>
-          <h1 class="hero-brand-title">MEN'S<br>LIFE MASTERY™</h1>
-          
-          <ul class="hero-bullet-pillars">
-            <li>Unleash Your Confidence</li>
-            <li>Unleash Your Power</li>
-            <li>Unleash Your Destiny</li>
-          </ul>
-
-          <div class="wixui-rich-text" style="margin-top: 18px;">
-            <h2 class="hero-headline-william" style="font-size: 28px; line-height: 1.2; margin-bottom: 14px;">
+<!-- 1. HERO SECTION (Screenshot Layout: Left-Aligned Large Text & Bullets | Right Dual Overlapping Session Imagery) -->
+<section class="wixui-section hero-wix-strip" id="comp-mj307itu">
+<div class="hero-bg-media-left"></div>
+<div class="hero-inner-container">
+<!-- Left: Brand Typography, Subheadline, Bullets & CTA Button -->
+<div class="hero-copy-col">
+<span class="hero-brand-subtitle">COMPREHENSIVE 79-LESSON CURRICULUM</span>
+<h1 class="hero-brand-title">MEN'S<br/>LIFE MASTERY™</h1>
+<ul class="hero-bullet-pillars">
+<li>Unleash Your Confidence</li>
+<li>Unleash Your Power</li>
+<li>Unleash Your Destiny</li>
+</ul>
+<div class="wixui-rich-text" style="margin-top: 18px;">
+<h2 class="hero-headline-william" style="font-size: 28px; line-height: 1.2; margin-bottom: 14px;">
               Inside the Online Dating Video Course
             </h2>
-            <p class="hero-subheadline-william" style="font-size: 16.5px; line-height: 1.6; color: #E5E7EB; margin-bottom: 18px;">
+<p class="hero-subheadline-william" style="font-size: 16.5px; line-height: 1.6; color: #E5E7EB; margin-bottom: 18px;">
               Before You Start plus 12 modules and 79 lesson videos, in the same order our coaching clients follow. Yours for life.
             </p>
-            <p style="font-size: 15.5px; line-height: 1.6; color: #D1D5DB; margin-bottom: 24px;">
+<p style="font-size: 15.5px; line-height: 1.6; color: #D1D5DB; margin-bottom: 24px;">
               First we build the man. Then we build a profile that tells the truth about him. Then we take you from the first message to a first meet she's glad she said yes to, and finish with a plan to keep you growing.
             </p>
+</div>
+<div class="hero-actions-row">
+<a class="wixui-button wixui-button--hero-white" href="#enroll">
+<span>Enroll Now: $499</span>
+<span class="wixui-button__icon-circle">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</span>
+</a>
+<a class="wixui-button wixui-button--secondary" href="#part-1">
+<span>Explore All 12 Modules</span>
+</a>
+</div>
+<div style="margin-top: 18px; font-size: 13.5px; color: var(--color-sand); font-weight: 600; letter-spacing: 0.04em;">
+            ✓ 12 Structured Modules • 79 HD Lesson Videos • Lifetime Access &amp; Updates
           </div>
-
-          <div class="hero-actions-row">
-            <a href="#enroll" class="wixui-button wixui-button--hero-white">
-              <span>Enroll Now: $499</span>
-              <span class="wixui-button__icon-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </span>
-            </a>
-            <a href="#part-1" class="wixui-button wixui-button--secondary">
-              <span>Explore All 12 Modules</span>
-            </a>
-          </div>
-
-          <div style="margin-top: 18px; font-size: 13.5px; color: var(--color-sand); font-weight: 600; letter-spacing: 0.04em;">
-            ✓ 12 Structured Modules &bull; 79 HD Lesson Videos &bull; Lifetime Access &amp; Updates
-          </div>
-        </div>
-
-        <!-- Right: Overlapping Dual-Image Style (Course Learning & Real-World Results) -->
-        <div class="hero-visual-col">
-          <div class="hero-main-photo-frame">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Online course self-paced video lessons on modern dating">
-          </div>
-          <div class="hero-inset-card">
-            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&amp;fit=crop&amp;w=600&amp;q=85" alt="Couple laughing together on an authentic date">
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 2. STICKY QUICK-NAV STRIP -->
-    <div class="quicknav-strip">
-      <div class="quicknav-inner">
-        <span class="quicknav-label">Jump to Section:</span>
-        <div class="quicknav-tabs">
-          <a href="#part-1" class="quicknav-tab">
-            <span>Part 1: Build the Man</span>
-            <span class="badge">27 Lessons</span>
-          </a>
-          <a href="#part-2" class="quicknav-tab">
-            <span>Part 2: Launch &amp; Mindset</span>
-            <span class="badge">25 Lessons</span>
-          </a>
-          <a href="#part-3" class="quicknav-tab">
-            <span>Part 3: Messages to Meets</span>
-            <span class="badge">27 Lessons</span>
-          </a>
-        </div>
-        <a href="#enroll" class="wixui-button wixui-button--primary" style="padding: 10px 22px; font-size: 13px;">
-          <span>Enroll: $499</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- 3. CURRICULUM STATS OVERVIEW STRIP -->
-    <section class="curriculum-summary-section">
-      <div class="summary-grid">
-        <div class="summary-card">
-          <div class="summary-card-num">79</div>
-          <div class="summary-card-title">Lesson Videos</div>
-          <div class="summary-card-desc">Concise, actionable HD videos covering every step of modern dating.</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-card-num">12 + 1</div>
-          <div class="summary-card-title">Modules &amp; Setup</div>
-          <div class="summary-card-desc">Before You Start plus 12 structured modules in progressive order.</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-card-num">100%</div>
-          <div class="summary-card-title">Actionable Outputs</div>
-          <div class="summary-card-desc">Specific walkaway assets, templates, worksheets, and game plans.</div>
-        </div>
-        <div class="summary-card">
-          <div class="summary-card-num">&infin;</div>
-          <div class="summary-card-title">Lifetime Access</div>
-          <div class="summary-card-desc">Return anytime to refresh your knowledge at your own pace.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. ALL MODULES BY PART (Part 1, Part 2, Part 3) -->
-    <section class="curriculum-part-section" id="part-1">
+</div>
+<!-- Right: Overlapping Dual-Image Style (Course Learning & Real-World Results) -->
+<div class="hero-visual-col">
+<div class="hero-main-photo-frame">
+<img alt="Online course self-paced video lessons on modern dating" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=800&amp;q=85"/>
+</div>
+<div class="hero-inset-card">
+<img alt="Couple laughing together on an authentic date" src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&amp;fit=crop&amp;w=600&amp;q=85"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. STICKY QUICK-NAV STRIP -->
+<div class="quicknav-strip">
+<div class="quicknav-inner">
+<span class="quicknav-label">Jump to Section:</span>
+<div class="quicknav-tabs">
+<a class="quicknav-tab" href="#part-1">
+<span>Part 1: Build the Man</span>
+<span class="badge">27 Lessons</span>
+</a>
+<a class="quicknav-tab" href="#part-2">
+<span>Part 2: Launch &amp; Mindset</span>
+<span class="badge">25 Lessons</span>
+</a>
+<a class="quicknav-tab" href="#part-3">
+<span>Part 3: Messages to Meets</span>
+<span class="badge">27 Lessons</span>
+</a>
+</div>
+<a class="wixui-button wixui-button--primary" href="#enroll" style="padding: 10px 22px; font-size: 13px;">
+<span>Enroll: $499</span>
+</a>
+</div>
+</div>
+<!-- 3. CURRICULUM STATS OVERVIEW STRIP -->
+<section class="curriculum-summary-section">
+<div class="summary-grid">
+<div class="summary-card">
+<div class="summary-card-num">79</div>
+<div class="summary-card-title">Lesson Videos</div>
+<div class="summary-card-desc">Concise, actionable HD videos covering every step of modern dating.</div>
+</div>
+<div class="summary-card">
+<div class="summary-card-num">12 + 1</div>
+<div class="summary-card-title">Modules &amp; Setup</div>
+<div class="summary-card-desc">Before You Start plus 12 structured modules in progressive order.</div>
+</div>
+<div class="summary-card">
+<div class="summary-card-num">100%</div>
+<div class="summary-card-title">Actionable Outputs</div>
+<div class="summary-card-desc">Specific walkaway assets, templates, worksheets, and game plans.</div>
+</div>
+<div class="summary-card">
+<div class="summary-card-num">∞</div>
+<div class="summary-card-title">Lifetime Access</div>
+<div class="summary-card-desc">Return anytime to refresh your knowledge at your own pace.</div>
+</div>
+</div>
+</section>
+<!-- 4. ALL MODULES BY PART (Part 1, Part 2, Part 3) -->
+<section class="curriculum-part-section" id="part-1">
 <div class="part-container">
 <div class="part-header">
 <div class="part-header-info">
@@ -2997,9 +3149,8 @@
 </div>
 </div>
 </section>
-
-    <!-- 5. REVIEWS SECTION (Exact Screenshot Staggered Layout on #303339) -->
-    <section class="wixui-column-strip reviews-wix-strip" id="comp-mj31jp4e">
+<!-- 5. REVIEWS SECTION (Exact Screenshot Staggered Layout on #303339) -->
+<section class="wixui-column-strip reviews-wix-strip" id="comp-mj31jp4e">
 <div class="reviews-inner-container">
 <!-- Left: Heading & Testimonial Quote Cards -->
 <div>
@@ -3048,37 +3199,35 @@
 </div>
 </div>
 </section>
-
-    <!-- 6. CLOSING CALL TO ACTION STRIP (Wix Strip on #303339) -->
-    <section class="wixui-section closing-wix-strip" id="enroll">
-      <div style="max-width: 860px; margin: 0 auto; text-align: center;">
-        <span class="section-eyebrow-accent" style="color: var(--color-sand);">LIFETIME ACCESS &bull; $499</span>
-        <h2 class="closing-title-kanit" style="font-size: 32px; line-height: 1.3; margin-bottom: 18px;">
+<!-- 6. CLOSING CALL TO ACTION STRIP (Wix Strip on #303339) -->
+<section class="wixui-section closing-wix-strip" id="enroll">
+<div style="max-width: 860px; margin: 0 auto; text-align: center;">
+<span class="section-eyebrow-accent" style="color: var(--color-sand);">LIFETIME ACCESS • $499</span>
+<h2 class="closing-title-kanit" style="font-size: 32px; line-height: 1.3; margin-bottom: 18px;">
           It's no longer up to you to prove you've got what it takes to get her. It's up to her to prove she has what it takes to get you.
         </h2>
-        <p class="closing-body-p" style="font-size: 18px; color: var(--color-sand); margin-bottom: 28px;">
+<p class="closing-body-p" style="font-size: 18px; color: var(--color-sand); margin-bottom: 28px;">
           79 lessons. One system. Your pace.
         </p>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
-          <a href="#enroll" class="wixui-button wixui-button--hero-white" style="font-size: 16px; padding: 18px 38px;">
-            <span>Enroll Now: $499</span>
-            <span class="wixui-button__icon-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </span>
-          </a>
-          <div style="display: flex; justify-content: center; gap: 24px; margin-top: 14px; font-size: 14px; font-weight: 600;">
-            <a href="service-1-online-dating-course.html" style="color: var(--color-sand); text-decoration: underline;">&larr; Return to Course Overview</a>
-            <a href="programs-pricing-overview.html" style="color: var(--color-sand); text-decoration: underline;">Explore All Programs &amp; Pricing &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WIX LIVE FOOTER COMPONENT -->
-    <footer class="wixui-footer">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+<a class="wixui-button wixui-button--hero-white" href="#enroll" style="font-size: 16px; padding: 18px 38px;">
+<span>Enroll Now: $499</span>
+<span class="wixui-button__icon-circle">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</span>
+</a>
+<div style="display: flex; justify-content: center; gap: 24px; margin-top: 14px; font-size: 14px; font-weight: 600;">
+<a href="service-1-online-dating-course.html" style="color: var(--color-sand); text-decoration: underline;">← Return to Course Overview</a>
+<a href="programs-pricing-overview.html" style="color: var(--color-sand); text-decoration: underline;">Explore All Programs &amp; Pricing →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- WIX LIVE FOOTER COMPONENT -->
+<footer class="wixui-footer">
 <div class="wixui-footer__inner">
 <div class="wixui-footer__logo">
 <img alt="Men's Life Mastery" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png"/>
@@ -3110,18 +3259,8 @@
 <p class="wixui-footer__copyright">Copyright © 2026 Men's Life Mastery™. All rights reserved.</p>
 </div>
 </footer>
-
-  </div>
-
-  <!-- Interactive Scripts matching Wix behavior -->
-  <script>
-    function setViewport(width, btn) {
-      const frame = document.getElementById('page-wrapper');
-      frame.style.width = width;
-      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
-    }
-  </script>
+</div>
+<!-- Interactive Scripts matching Wix behavior -->
 
 </body>
 </html>
