@@ -2874,6 +2874,282 @@
       }
     }
 </style>
+<style>
+/* ==========================================================================
+       HEADER DROPDOWN MENUS & COMPREHENSIVE FOOTER SITEMAP SYSTEM
+       ========================================================================== */
+    /* Header Dropdown Menu */
+    .wixui-horizontal-menu__item {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+    }
+    .dropdown-toggle {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      cursor: pointer !important;
+    }
+    .dropdown-chevron {
+      transition: transform 0.25s ease !important;
+      stroke: currentColor !important;
+      margin-left: 2px !important;
+    }
+    .wixui-horizontal-menu__item.has-dropdown:hover .dropdown-chevron,
+    .wixui-horizontal-menu__item.has-dropdown:focus-within .dropdown-chevron {
+      transform: rotate(180deg) !important;
+    }
+
+    .nav-dropdown-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: -12px !important;
+      min-width: 240px !important;
+      background: #181A1F !important;
+      border: 1px solid rgba(255, 255, 255, 0.14) !important;
+      border-radius: 12px !important;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+      padding: 10px 0 !important;
+      margin: 12px 0 0 0 !important;
+      list-style: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(10px) !important;
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s !important;
+      z-index: 1001 !important;
+      box-sizing: border-box !important;
+    }
+    .nav-dropdown-menu::before {
+      content: '' !important;
+      position: absolute !important;
+      top: -14px !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 14px !important;
+    }
+    .wixui-horizontal-menu__item.has-dropdown:hover .nav-dropdown-menu,
+    .wixui-horizontal-menu__item.has-dropdown:focus-within .nav-dropdown-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+    .nav-dropdown-menu li {
+      margin: 0 !important;
+      padding: 0 !important;
+      display: block !important;
+    }
+    .dropdown-item {
+      display: block !important;
+      padding: 11px 20px !important;
+      font-family: var(--font-alt) !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+      color: #E0E4E8 !important;
+      text-decoration: none !important;
+      letter-spacing: 0.02em !important;
+      transition: background 0.18s ease, color 0.18s ease, padding-left 0.18s ease !important;
+      white-space: nowrap !important;
+      text-align: left !important;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background: rgba(237, 232, 208, 0.12) !important;
+      color: var(--color-sand) !important;
+      padding-left: 25px !important;
+    }
+
+    /* Comprehensive Footer Sitemap Styling */
+    .wixui-footer {
+      background: #0E0F12 !important;
+      color: #FFFFFF !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      padding: 64px 24px 32px !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+    }
+    .wixui-footer__sitemap-container {
+      max-width: var(--wix-max-width) !important;
+      margin: 0 auto !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .wixui-footer__sitemap-grid {
+      display: grid !important;
+      grid-template-columns: 1.4fr 1fr 1fr 1.1fr !important;
+      gap: 48px !important;
+      margin-bottom: 52px !important;
+    }
+    .footer-col {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+    .footer-col--brand .footer-brand-logo {
+      display: inline-block !important;
+      margin-bottom: 16px !important;
+    }
+    .footer-col--brand .footer-brand-logo img {
+      height: 42px !important;
+      width: auto !important;
+      display: block !important;
+      filter: none !important;
+    }
+    .footer-brand-tagline {
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      color: #A0A8B0 !important;
+      margin-bottom: 18px !important;
+      max-width: 340px !important;
+    }
+    .footer-contact-info {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      color: var(--color-sand) !important;
+      margin-bottom: 20px !important;
+    }
+    .footer-col-title {
+      font-family: var(--font-display) !important;
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      color: #FFFFFF !important;
+      margin-bottom: 20px !important;
+      position: relative !important;
+      padding-bottom: 8px !important;
+    }
+    .footer-col-title::after {
+      content: '' !important;
+      position: absolute !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      width: 32px !important;
+      height: 2px !important;
+      background: var(--color-sand) !important;
+    }
+    .footer-links-list {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+    .footer-links-list li {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .footer-links-list a {
+      font-family: var(--font-alt) !important;
+      font-size: 13.5px !important;
+      color: #B5BCC4 !important;
+      text-decoration: none !important;
+      transition: color 0.18s ease, transform 0.18s ease !important;
+      display: inline-block !important;
+      line-height: 1.4 !important;
+    }
+    .footer-links-list a:hover {
+      color: var(--color-sand) !important;
+      transform: translateX(4px) !important;
+    }
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      padding-top: 28px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 16px !important;
+    }
+    .wixui-footer__copyright {
+      font-size: 13px !important;
+      color: #7A828B !important;
+      margin: 0 !important;
+    }
+    .footer-legal-links {
+      display: flex !important;
+      align-items: center !important;
+      gap: 14px !important;
+    }
+    .footer-legal-links a {
+      font-size: 13px !important;
+      color: #9AA2AC !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+    }
+    .footer-legal-links a:hover {
+      color: #FFFFFF !important;
+    }
+    .footer-dot {
+      color: #555A60 !important;
+      font-size: 10px !important;
+    }
+
+    /* Mobile Responsive Header Drawer & Footer Sitemap */
+    @media (max-width: 1024px) {
+      .wixui-horizontal-menu {
+        position: fixed !important;
+        top: 68px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(100vh - 68px) !important;
+        background: #141518 !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 24px !important;
+        overflow-y: auto !important;
+        display: none !important;
+        z-index: 9999 !important;
+        box-sizing: border-box !important;
+      }
+      .wixui-horizontal-menu.mobile-open {
+        display: flex !important;
+      }
+      .wixui-horizontal-menu__list {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        gap: 16px !important;
+      }
+      .wixui-horizontal-menu__item {
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+      .dropdown-toggle {
+        width: 100% !important;
+        justify-content: space-between !important;
+        padding: 10px 0 !important;
+      }
+      .nav-dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        min-width: 100% !important;
+        box-shadow: none !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        margin: 6px 0 12px !important;
+        padding: 6px 0 !important;
+      }
+      .wixui-footer__sitemap-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 36px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wixui-footer__sitemap-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .footer-bottom-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+    }
+</style>
 </head>
 <body>
 <div class="page-main-wrapper" id="page-wrapper">
@@ -2884,7 +3160,49 @@
 <img alt="Men's Life Mastery Logo" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png" style="filter: none !important;"/>
 </a>
 <nav class="wixui-horizontal-menu">
-<ul class="wixui-horizontal-menu__list"><li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="programs-overview.html">Programs &amp; Pricing</a></li><li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="video-course.html">Video Course</a></li><li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="6-week-coaching.html">1:1 Coaching</a></li><li class="wixui-horizontal-menu__item"><a class="wixui-horizontal-menu__item-label" href="smv-session.html">SMV Session</a></li></ul>
+<ul class="wixui-horizontal-menu__list">
+<li class="wixui-horizontal-menu__item">
+<a class="wixui-horizontal-menu__item-label" href="programs-overview.html">Programs &amp; Pricing</a>
+</li>
+<li class="wixui-horizontal-menu__item has-dropdown">
+<a class="wixui-horizontal-menu__item-label dropdown-toggle" href="video-course.html">
+Video Course
+<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
+<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<ul class="nav-dropdown-menu">
+<li><a class="dropdown-item" href="video-course.html">Course Overview</a></li>
+<li><a class="dropdown-item" href="video-course-modules.html">All Modules</a></li>
+</ul>
+</li>
+<li class="wixui-horizontal-menu__item has-dropdown active">
+<a class="wixui-horizontal-menu__item-label dropdown-toggle" href="6-week-coaching.html">
+1:1 Coaching
+<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
+<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<ul class="nav-dropdown-menu">
+<li><a class="dropdown-item" href="6-week-coaching.html">6-Week Transformation</a></li>
+<li><a class="dropdown-item" href="12-week-coaching.html">12-Week Transformation</a></li>
+<li><a class="dropdown-item" href="1-on-1-coaching.html">60-Min Session</a></li>
+<li><a class="dropdown-item" href="smv-session.html">SMV Strategy Session</a></li>
+</ul>
+</li>
+<li class="wixui-horizontal-menu__item has-dropdown">
+<a class="wixui-horizontal-menu__item-label dropdown-toggle" href="6-week-modules.html">
+Curriculums
+<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
+<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<ul class="nav-dropdown-menu">
+<li><a class="dropdown-item" href="6-week-modules.html">6-Week Roadmap</a></li>
+<li><a class="dropdown-item" href="12-week-modules.html">12-Week Roadmap</a></li>
+</ul>
+</li>
+</ul>
 <div class="wixui-header__social">
 <a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" target="_blank">
 <svg height="16" viewbox="0 0 24 24" width="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
@@ -3494,16 +3812,18 @@
 </section>
 <!-- WIX LIVE FOOTER COMPONENT -->
 <footer class="wixui-footer">
-<div class="wixui-footer__inner">
-<div class="wixui-footer__logo">
-<img alt="Men's Life Mastery" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png"/>
-</div>
-<div class="wixui-footer__links-row">
-<a class="wixui-footer__link" href="https://www.menslifemastery.com/privacy-policy" target="_blank">Privacy Policy</a>
-<span style="color: #444444;">•</span>
-<a class="wixui-footer__link" href="https://www.menslifemastery.com/refund-policy" target="_blank">Refund Policy</a>
-<span style="color: #444444;">•</span>
-<span class="wixui-footer__phone">(213) 348-3168</span>
+<div class="wixui-footer__sitemap-container">
+<div class="wixui-footer__sitemap-grid">
+<!-- Col 1: Brand & Overview -->
+<div class="footer-col footer-col--brand">
+<a class="footer-brand-logo" href="programs-overview.html" title="Men's Life Mastery">
+<img alt="Men's Life Mastery" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png" style="filter: none !important;"/>
+</a>
+<p class="footer-brand-tagline">
+Transform your confidence, relationships, and Sexual Market Value (SMV) with founder Bill Cottles. 35+ years of real-world coaching expertise.
+</p>
+<div class="footer-contact-info">
+📞 (213) 348-3168
 </div>
 <div class="wixui-footer__social-row">
 <a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" target="_blank">
@@ -3522,7 +3842,46 @@
 <svg height="16" viewbox="0 0 24 24" width="16"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
 </a>
 </div>
+</div>
+<!-- Col 2: Programs & Course -->
+<div class="footer-col">
+<h4 class="footer-col-title">Programs &amp; Course</h4>
+<ul class="footer-links-list">
+<li><a href="programs-overview.html">Programs &amp; Pricing Overview</a></li>
+<li><a href="video-course.html">Online Dating Video Course</a></li>
+<li><a href="video-course-modules.html">Video Course: All 12 Modules</a></li>
+</ul>
+</div>
+<!-- Col 3: 1:1 Coaching -->
+<div class="footer-col">
+<h4 class="footer-col-title">1:1 Coaching</h4>
+<ul class="footer-links-list">
+<li><a href="6-week-coaching.html">6-Week Transformation</a></li>
+<li><a href="12-week-coaching.html">12-Week Transformation</a></li>
+<li><a href="1-on-1-coaching.html">60-Min Targeted Session</a></li>
+<li><a href="smv-session.html">SMV Strategy Session</a></li>
+</ul>
+</div>
+<!-- Col 4: Curriculums & Consultations -->
+<div class="footer-col">
+<h4 class="footer-col-title">Curriculums &amp; Roadmaps</h4>
+<ul class="footer-links-list">
+<li><a href="6-week-modules.html">6-Week Program Roadmap</a></li>
+<li><a href="12-week-modules.html">12-Week Program Roadmap</a></li>
+<li><a href="programs-overview.html#compare">Program Comparison Matrix</a></li>
+<li><a href="#discovery-call">Book Free Discovery Call</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar: Legal & Copyright -->
+<div class="footer-bottom-bar">
 <p class="wixui-footer__copyright">Copyright © 2026 Men's Life Mastery™. All rights reserved.</p>
+<div class="footer-legal-links">
+<a class="wixui-footer__link" href="https://www.menslifemastery.com/privacy-policy" target="_blank">Privacy Policy</a>
+<span class="footer-dot">•</span>
+<a class="wixui-footer__link" href="https://www.menslifemastery.com/refund-policy" target="_blank">Refund Policy</a>
+</div>
+</div>
 </div>
 </footer>
 </div>
@@ -3550,5 +3909,19 @@
 
     
   </script>
+
+<script>
+// Mobile Drawer & Dropdown Navigation Controller
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('.wixui-horizontal-menu');
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener('click', function() {
+      navMenu.classList.toggle('mobile-open');
+    });
+  }
+});
+</script>
+
 </body>
 </html>
