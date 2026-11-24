@@ -2340,6 +2340,159 @@
       }
     }
 </style>
+<style>
+/* ==========================================================================
+       SCALED-UP HERO OVERLAPPING IMAGES (BALANCED HEIGHT & STRICT ZERO OVERLAP)
+       ========================================================================== */
+    .hero-wix-strip {
+      background: #25282E radial-gradient(circle at 80% 20%, rgba(48, 76, 104, 0.25) 0%, rgba(30, 32, 38, 0.95) 70%) !important;
+      color: #FFFFFF !important;
+      padding: 80px 24px 90px !important;
+      position: relative !important;
+      border-bottom: 1px solid #1E1E1E !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
+    }
+    .hero-inner-container {
+      max-width: 1240px !important;
+      margin: 0 auto !important;
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+      gap: 4rem !important; /* Strict 64px separation ensuring zero overlap with left text */
+      align-items: center !important;
+      position: relative !important;
+      z-index: 5 !important;
+      box-sizing: border-box !important;
+    }
+    .hero-copy-col {
+      padding-left: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      width: 100% !important;
+      max-width: 580px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Scaled-up Right Visual Container */
+    .hero-visual-col {
+      position: relative !important;
+      width: 100% !important;
+      max-width: 600px !important;
+      min-height: 560px !important; /* Matches overall height of the left text column */
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      margin: 0 auto !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Base/Back Photo: 'This Guy' */
+    .hero-main-photo-frame {
+      position: relative !important;
+      width: 86% !important;
+      max-width: 510px !important;
+      border-radius: 16px !important;
+      overflow: hidden !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      box-sizing: border-box !important;
+      z-index: 2 !important;
+    }
+    .hero-main-photo-frame img {
+      width: 100% !important;
+      height: 360px !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.4s ease !important;
+    }
+    .hero-main-photo-frame:hover img {
+      transform: scale(1.02) !important;
+    }
+
+    /* Overlapping Front Photo: 'That Guy' */
+    .hero-inset-card {
+      position: absolute !important;
+      bottom: 0px !important;
+      right: 0px !important;
+      width: 74% !important;
+      max-width: 440px !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      border: 4px solid #141518 !important;
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.8), 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+      box-sizing: border-box !important;
+      z-index: 4 !important;
+    }
+    .hero-inset-card img {
+      width: 100% !important;
+      height: 310px !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.4s ease !important;
+    }
+    .hero-inset-card:hover img {
+      transform: scale(1.02) !important;
+    }
+
+    /* Responsive: Tablets & Mobile */
+    @media (max-width: 1024px) {
+      .hero-inner-container {
+        grid-template-columns: 1fr !important;
+        gap: 48px !important;
+      }
+      .hero-copy-col {
+        order: 1 !important;
+        max-width: 100% !important;
+      }
+      .hero-visual-col {
+        order: 2 !important;
+        max-width: 520px !important;
+        min-height: 480px !important;
+        margin: 0 auto !important;
+      }
+      .hero-main-photo-frame {
+        width: 86% !important;
+        max-width: 440px !important;
+      }
+      .hero-main-photo-frame img {
+        height: 310px !important;
+      }
+      .hero-inset-card {
+        width: 72% !important;
+        max-width: 380px !important;
+      }
+      .hero-inset-card img {
+        height: 260px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-wix-strip {
+        padding: 56px 16px !important;
+      }
+      .hero-inner-container {
+        gap: 36px !important;
+      }
+      .hero-visual-col {
+        max-width: 100% !important;
+        min-height: 390px !important;
+      }
+      .hero-main-photo-frame {
+        width: 88% !important;
+      }
+      .hero-main-photo-frame img {
+        height: 240px !important;
+      }
+      .hero-inset-card {
+        width: 74% !important;
+      }
+      .hero-inset-card img {
+        height: 200px !important;
+      }
+    }
+</style>
 </head>
 <body>
 <div class="page-main-wrapper" id="page-wrapper">
