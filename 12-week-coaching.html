@@ -4361,6 +4361,124 @@ h2.hero-headline-william {
       min-height: 48px !important;
     }
   }
+
+  /* 4. MOBILE CARDS & QUICKNAV ALIGNMENT FIX (<= 768px) */
+  @media (max-width: 768px) {
+    /* Quicknav / Jump-to strips: no horizontal clipping or giant circle wrapping */
+    .quicknav-strip {
+      padding: 16px !important;
+    }
+    .quicknav-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 12px !important;
+      width: 100% !important;
+    }
+    .quicknav-label {
+      text-align: left !important;
+      display: block !important;
+      margin: 0 !important;
+    }
+    .quicknav-tabs {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 10px !important;
+      width: 100% !important;
+      overflow-x: visible !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .quicknav-tabs.quicknav-weeks-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 8px !important;
+    }
+    .quicknav-tab {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 8px !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      min-height: 44px !important;
+      padding: 10px 14px !important;
+      border-radius: 12px !important;
+      white-space: normal !important;
+      text-align: left !important;
+      box-sizing: border-box !important;
+      margin: 0 !important;
+    }
+    .quicknav-tabs.quicknav-weeks-grid .quicknav-tab {
+      justify-content: center !important;
+      text-align: center !important;
+      white-space: nowrap !important;
+      padding: 10px 8px !important;
+      font-size: 13.5px !important;
+    }
+    .quicknav-tab .badge {
+      flex-shrink: 0 !important;
+      white-space: nowrap !important;
+    }
+    .quicknav-inner > a.wixui-button {
+      width: 100% !important;
+      justify-content: center !important;
+      min-height: 46px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* All card grids & module grids: strict single-column vertical stack, zero horizontal overflow */
+    .services-grid-top-three,
+    .services-grid-bottom-two,
+    .services-grid-top,
+    .services-grid-bottom,
+    .who-cards-grid,
+    .steps-cards-grid,
+    .steps-cards-grid.four-cards,
+    .focus-cards-grid,
+    .smv-pillars-grid,
+    .smv-pillars-grid.smv-4-3-grid,
+    .week-modules-grid,
+    .lessons-list-grid,
+    .lesson-grid,
+    .summary-grid,
+    .reviews-grid,
+    .reviews-2x2-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: visible !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      scroll-snap-type: none !important;
+    }
+
+    .services-grid-top-three > *,
+    .services-grid-bottom-two > *,
+    .services-grid-top > *,
+    .services-grid-bottom > *,
+    .who-cards-grid > *,
+    .steps-cards-grid > *,
+    .focus-cards-grid > *,
+    .smv-pillars-grid > *,
+    .week-modules-grid > *,
+    .lessons-list-grid > *,
+    .lesson-grid > *,
+    .summary-grid > *,
+    .reviews-grid > *,
+    .reviews-2x2-grid > * {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      flex: none !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
+  }
 </style></head>
 <body>
 <div class="page-main-wrapper" id="page-wrapper">
