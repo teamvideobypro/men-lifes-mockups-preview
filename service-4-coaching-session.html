@@ -3216,7 +3216,582 @@
       margin-left: 8px !important;
     }
 </style>
-</head>
+<style id="ui-audit-enforcement-fixes">
+/* ==========================================================================
+   UI AUDIT ENFORCEMENT FIXES:
+   1. Calendar Replacement Centered CTA & Consultation Alignment
+   2. Responsive Tables (Tablet Fluid + Mobile Stacked Flex-Cards <= 768px)
+   3. Constrained Hero & Overview Polaroid Hover (scale <= 1.02, 0.3s ease-in-out, Zero Badge/Text Overlap)
+   4. Controlled Structured Reviews Collage & Constrained Card Hover
+   ========================================================================== */
+
+/* 1. Consultation CTA Column (Calendar Removed) */
+.consultation-inner-container {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) !important;
+  gap: 48px !important;
+  align-items: center !important;
+}
+.consultation-photo-frame {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 20px !important;
+}
+.consultation-photo-frame img {
+  width: 100% !important;
+  height: 340px !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  display: block !important;
+}
+.consultation-cta-col {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  padding: 24px 16px !important;
+  box-sizing: border-box !important;
+}
+.consultation-cta-btn {
+  width: auto !important;
+  min-width: 310px !important;
+  max-width: 100% !important;
+  justify-content: center !important;
+  padding: 16px 28px !important;
+  font-size: 14px !important;
+  letter-spacing: 0.06em !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+.wixui-button--primary .wixui-button__icon-circle svg {
+  stroke: var(--color-slate-blue) !important;
+  color: var(--color-slate-blue) !important;
+}
+@media (max-width: 992px) {
+  .consultation-inner-container {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .consultation-photo-frame img {
+    height: 280px !important;
+  }
+  .consultation-cta-col {
+    padding: 8px 0 0 !important;
+  }
+}
+@media (max-width: 640px) {
+  .consultation-photo-frame img {
+    height: 220px !important;
+  }
+  .consultation-cta-btn {
+    min-width: 0 !important;
+    width: 100% !important;
+    white-space: normal !important;
+    padding: 15px 20px !important;
+    font-size: 13.5px !important;
+  }
+}
+
+/* Fix Mobile & Tablet Drawer Override Regression */
+@media (max-width: 1024px) {
+  .wixui-horizontal-menu {
+    display: none !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+  }
+  .wixui-horizontal-menu.mobile-open {
+    display: flex !important;
+  }
+  .wixui-horizontal-menu__list {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+  .wixui-button--header {
+    margin-left: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* 2. Responsive Table Layouts (Desktop, Tablet & Mobile Flex-Card Stacking) */
+@media (min-width: 769px) {
+  .roadmap-styled-table thead th:first-child,
+  .roadmap-styled-table tbody td:first-child {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .compare-table-shell,
+  .modules-table-shell {
+    overflow-x: auto !important;
+    max-width: 100% !important;
+  }
+  table.wix-compare-table,
+  table.roadmap-styled-table {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  .wix-compare-table th,
+  .wix-compare-table td,
+  .roadmap-styled-table thead th,
+  .roadmap-styled-table tbody td {
+    padding: 14px 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .compare-table-shell,
+  .modules-table-shell {
+    overflow-x: visible !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 24px auto !important;
+    padding: 0 !important;
+  }
+  table.wix-compare-table,
+  table.roadmap-styled-table {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  table.wix-compare-table thead,
+  table.roadmap-styled-table thead {
+    display: none !important;
+  }
+  table.wix-compare-table tbody,
+  table.roadmap-styled-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+  table.wix-compare-table tbody tr,
+  table.roadmap-styled-table tbody tr {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    background: #FFFFFF !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(48, 76, 104, 0.06) !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+  }
+  table.wix-compare-table tbody td,
+  table.roadmap-styled-table tbody td {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+    width: 100% !important;
+    padding: 13px 16px !important;
+    text-align: left !important;
+    border: none !important;
+    border-bottom: 1px solid #EFECE4 !important;
+    background: #FFFFFF !important;
+    font-size: 15.5px !important;
+    line-height: 1.5 !important;
+    color: #2E2E2E !important;
+    box-sizing: border-box !important;
+  }
+  table.wix-compare-table tbody td:last-child,
+  table.roadmap-styled-table tbody td:last-child {
+    border-bottom: none !important;
+  }
+  table.wix-compare-table tbody tr td:first-child,
+  table.roadmap-styled-table tbody tr td:first-child {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    background: var(--color-cream) !important;
+    border-bottom: 2px solid var(--color-border) !important;
+    font-weight: 800 !important;
+    font-size: 16px !important;
+    color: var(--color-dark) !important;
+    padding: 14px 16px !important;
+  }
+  table.roadmap-styled-table tbody tr td:first-child[data-label="#"]::before {
+    content: "MODULE";
+    font-family: var(--font-alt);
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--color-slate-blue);
+    text-transform: uppercase;
+  }
+  table.wix-compare-table tbody tr td:not(:first-child)[data-label]::before,
+  table.roadmap-styled-table tbody tr td:not(:first-child)[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-alt);
+    font-size: 11.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--color-slate-blue);
+    margin-bottom: 2px;
+  }
+  .session-timeline-row {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 16px !important;
+  }
+}
+
+/* 3. Hover Effect & Overlap Fix (Hero & Overview Polaroids) */
+.hero-copy-col,
+.transform-copy-col {
+  position: relative !important;
+  z-index: 15 !important;
+}
+.hero-visual-col {
+  position: relative !important;
+  z-index: 5 !important;
+  overflow: visible !important;
+}
+.hero-main-photo-frame,
+.hero-inset-card {
+  overflow: hidden !important;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+.hero-main-photo-frame img,
+.hero-inset-card img {
+  transition: transform 0.3s ease-in-out !important;
+}
+.hero-main-photo-frame:hover img,
+.hero-inset-card:hover img {
+  transform: scale(1.02) !important;
+}
+
+.transform-media-col {
+  position: relative !important;
+  z-index: 5 !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+.polaroid-collage-wrap,
+.transform-photo-stack {
+  position: relative !important;
+  min-height: 615px !important;
+  width: 100% !important;
+  max-width: 540px !important;
+  margin: 0 auto !important;
+  padding: 8px 8px 96px !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+.polaroid-card-1 {
+  position: absolute !important;
+  top: 4px !important;
+  left: 6px !important;
+  width: 330px !important;
+  max-width: 66% !important;
+  background: #FFFFFF !important;
+  padding: 14px 14px 46px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transform: rotate(-4deg) !important;
+  transform-origin: center center !important;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+  z-index: 2 !important;
+  box-sizing: border-box !important;
+}
+.polaroid-card-1:hover {
+  transform: rotate(-4deg) scale(1.02) !important;
+  z-index: 3 !important;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.2) !important;
+}
+.polaroid-card-1 img {
+  width: 100% !important;
+  height: 235px !important;
+  display: block !important;
+  border-radius: 4px !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+}
+.polaroid-card-2 {
+  position: absolute !important;
+  bottom: 102px !important;
+  right: 8px !important;
+  width: 320px !important;
+  max-width: 64% !important;
+  background: #FFFFFF !important;
+  padding: 14px 14px 46px !important;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  transform: rotate(3.5deg) !important;
+  transform-origin: center center !important;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+  z-index: 4 !important;
+  box-sizing: border-box !important;
+}
+.polaroid-card-2:hover {
+  transform: rotate(3.5deg) scale(1.02) !important;
+  z-index: 5 !important;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22) !important;
+}
+.polaroid-card-2 img {
+  width: 100% !important;
+  height: 225px !important;
+  display: block !important;
+  border-radius: 4px !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+}
+.badge-35-years,
+.expertise-badge-pill {
+  position: absolute !important;
+  bottom: 4px !important;
+  left: 6px !important;
+  z-index: 20 !important;
+  max-width: calc(100% - 16px) !important;
+}
+@media (max-width: 1024px) {
+  .polaroid-collage-wrap,
+  .transform-photo-stack {
+    max-width: 480px !important;
+    min-height: 560px !important;
+  }
+  .polaroid-card-1 {
+    width: 295px !important;
+  }
+  .polaroid-card-1 img {
+    height: 210px !important;
+  }
+  .polaroid-card-2 {
+    width: 285px !important;
+    bottom: 96px !important;
+  }
+  .polaroid-card-2 img {
+    height: 200px !important;
+  }
+}
+@media (max-width: 640px) {
+  .polaroid-collage-wrap,
+  .transform-photo-stack {
+    max-width: 340px !important;
+    min-height: 460px !important;
+    padding-bottom: 84px !important;
+  }
+  .polaroid-card-1 {
+    width: 220px !important;
+    max-width: 68% !important;
+    padding: 10px 10px 34px !important;
+  }
+  .polaroid-card-1 img {
+    height: 155px !important;
+  }
+  .polaroid-card-2 {
+    width: 215px !important;
+    max-width: 66% !important;
+    bottom: 86px !important;
+    padding: 10px 10px 34px !important;
+  }
+  .polaroid-card-2 img {
+    height: 150px !important;
+  }
+  .badge-35-years,
+  .expertise-badge-pill {
+    bottom: 2px !important;
+    left: 4px !important;
+    padding: 10px 14px !important;
+  }
+}
+
+/* 4. Reviews Section Image Alignment (Structured, Contained Polaroid Collage) */
+.reviews-header-left,
+.reviews-quotes-stack {
+  position: relative !important;
+  z-index: 15 !important;
+}
+.reviews-collage-wrap {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 540px !important;
+  min-height: auto !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: center !important;
+  justify-items: center !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+.dashed-arrow-graphic {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 62% !important;
+  max-width: 280px !important;
+  height: auto !important;
+  opacity: 0.25 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+.reviews-polaroid-1,
+.reviews-polaroid-2,
+.reviews-polaroid-3 {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  max-width: 220px !important;
+  margin: 0 !important;
+  background: #FFFFFF !important;
+  padding: 10px 10px 28px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.38) !important;
+  z-index: 3 !important;
+  box-sizing: border-box !important;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+.reviews-polaroid-1 img,
+.reviews-polaroid-2 img,
+.reviews-polaroid-3 img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  display: block !important;
+  border-radius: 3px !important;
+}
+.reviews-polaroid-1 {
+  transform: rotate(-2.5deg) !important;
+}
+.reviews-polaroid-1:hover {
+  transform: rotate(-2.5deg) scale(1.02) !important;
+  z-index: 6 !important;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45) !important;
+}
+.reviews-polaroid-2 {
+  transform: rotate(3deg) translateY(10px) !important;
+}
+.reviews-polaroid-2:hover {
+  transform: rotate(3deg) translateY(10px) scale(1.02) !important;
+  z-index: 6 !important;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45) !important;
+}
+.reviews-polaroid-3 {
+  transform: rotate(-2deg) !important;
+}
+.reviews-polaroid-3:hover {
+  transform: rotate(-2deg) scale(1.02) !important;
+  z-index: 6 !important;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45) !important;
+}
+.transformed-men-badge,
+.reviews-badge-transformed {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  z-index: 7 !important;
+  max-width: 100% !important;
+  justify-self: center !important;
+  align-self: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 16px !important;
+  background: rgba(30, 42, 56, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35) !important;
+  box-sizing: border-box !important;
+}
+.transformed-men-badge .avatar-stack-circles {
+  display: flex !important;
+  flex-shrink: 0 !important;
+}
+.transformed-men-badge .avatar-stack-circles img {
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid #FFFFFF !important;
+  margin-left: -6px !important;
+}
+.transformed-men-badge .avatar-stack-circles img:first-child {
+  margin-left: 0 !important;
+}
+.transformed-men-text {
+  white-space: normal !important;
+  line-height: 1.25 !important;
+  text-align: left !important;
+}
+@media (max-width: 640px) {
+  .reviews-collage-wrap {
+    padding: 12px !important;
+    gap: 14px !important;
+    min-height: auto !important;
+  }
+  .reviews-polaroid-1,
+  .reviews-polaroid-2,
+  .reviews-polaroid-3 {
+    width: 100% !important;
+    max-width: 165px !important;
+    padding: 8px 8px 22px !important;
+  }
+  .reviews-polaroid-2 {
+    transform: rotate(3deg) translateY(6px) !important;
+  }
+  .reviews-polaroid-2:hover {
+    transform: rotate(3deg) translateY(6px) scale(1.02) !important;
+  }
+  .transformed-men-badge,
+  .reviews-badge-transformed {
+    padding: 10px 12px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    border-radius: 16px !important;
+    gap: 6px !important;
+  }
+  .transformed-men-text {
+    text-align: center !important;
+    font-size: 11px !important;
+  }
+}
+
+/* Consistent Smooth Card Hover Across All Pages */
+.wix-service-card,
+.module-card,
+.week-detail-card,
+.smv-pillar-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+</style></head>
 <body>
 <div class="page-main-wrapper" id="page-wrapper">
 <!-- WIX LIVE HEADER COMPONENT -->
@@ -3269,8 +3844,7 @@ Curriculums
 </ul>
 </li>
 </ul>
-
-<a class="wixui-button wixui-button--header" href="#discovery-call">Book Your Free Discovery Call</a>
+<a class="wixui-button wixui-button--header" href="https://www.menslifemastery.com/contact-us" rel="noopener noreferrer" target="_blank">Book Your Free Discovery Call</a>
 </nav>
 <button aria-label="Open menu" class="mobile-nav-toggle">
 <svg height="24" viewbox="0 0 24 24" width="24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
@@ -3378,7 +3952,7 @@ Curriculums
 </section>
 <!-- 3. WHAT WE CAN WORK ON (Cloned Masonry Grid with Bill Cottles Backdrop) -->
 <section class="wixui-column-strip services-wix-strip" id="topics">
-<img alt="Bill Cottles - Founder" class="services-founder-backdrop" src="https://static.wixstatic.com/media/5da33b_e7f2bc4c7c1d4aa6905795fdd5ce8148~mv2.jpg/v1/fill/w_1400,h_850,al_c,q_85,enc_avif,quality_auto/5da33b_e7f2bc4c7c1d4aa6905795fdd5ce8148~mv2.jpg"/>
+<img alt="Bill Cottles - Founder" class="services-founder-backdrop" src="https://static.wixstatic.com/media/5da33b_e7f2bc4c7c1d4aa6905795fdd5ce8148~mv2.jpg"/>
 <div class="services-inner-container">
 <div class="services-header-center">
 <span class="pill-tag-white">WHAT WE CAN WORK ON</span>
@@ -3645,7 +4219,7 @@ Curriculums
 <!-- Left: Image & Value Copy -->
 <div class="consultation-copy-box">
 <div class="consultation-photo-frame">
-<img alt="Attractive couple enjoying luxury lifestyle" src="https://static.wixstatic.com/media/5da33b_f48dd8c4d84e499097163f7a2c018b2b~mv2.jpg/v1/fill/w_560,h_420,al_c,q_85,enc_avif,quality_auto/5da33b_f48dd8c4d84e499097163f7a2c018b2b~mv2.jpg"/>
+<img alt="Attractive couple enjoying luxury lifestyle" src="https://static.wixstatic.com/media/5da33b_f48dd8c4d84e499097163f7a2c018b2b~mv2.jpg"/>
 </div>
 <h2 style="font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--color-dark); margin-bottom: 12px;">
             Book Your 60-Minute Session
@@ -3658,78 +4232,7 @@ Curriculums
           </div>
 </div>
 <!-- Right: Wix Interactive Booking Card -->
-<div class="wix-booking-card">
-<h3 class="booking-card-title">Book <span>A Session</span></h3>
-<p class="booking-card-desc">60-minute private strategy call with Bill Cottles.</p>
-<div class="booking-service-choice">
-<div class="booking-radio-dot"></div>
-<div class="booking-service-info">
-<div class="booking-service-name">1:1 Coaching Session — $399</div>
-<div class="booking-service-sub">60 Minutes • Video Call on Zoom or Google Meet</div>
-</div>
-</div>
-<div class="booking-calendar-wrap">
-<div class="calendar-month-row">
-<span>November 2026</span>
-<div style="display:flex; gap:8px;">
-<button style="background:none; border:none; cursor:pointer; color:#666;" type="button">&lt;</button>
-<button style="background:none; border:none; cursor:pointer; color:#666;" type="button">&gt;</button>
-</div>
-</div>
-<div class="calendar-grid">
-<div class="cal-day-head">S</div>
-<div class="cal-day-head">M</div>
-<div class="cal-day-head">T</div>
-<div class="cal-day-head">W</div>
-<div class="cal-day-head">T</div>
-<div class="cal-day-head">F</div>
-<div class="cal-day-head">S</div>
-<div class="cal-day disabled">26</div>
-<div class="cal-day disabled">27</div>
-<div class="cal-day disabled">28</div>
-<div class="cal-day disabled">29</div>
-<div class="cal-day disabled">30</div>
-<div class="cal-day disabled">31</div>
-<div class="cal-day">1</div>
-<div class="cal-day">2</div>
-<div class="cal-day">3</div>
-<div class="cal-day">4</div>
-<div class="cal-day">5</div>
-<div class="cal-day">6</div>
-<div class="cal-day">7</div>
-<div class="cal-day">8</div>
-<div class="cal-day">9</div>
-<div class="cal-day">10</div>
-<div class="cal-day">11</div>
-<div class="cal-day">12</div>
-<div class="cal-day">13</div>
-<div class="cal-day">14</div>
-<div class="cal-day">15</div>
-<div class="cal-day">16</div>
-<div class="cal-day">17</div>
-<div class="cal-day">18</div>
-<div class="cal-day">19</div>
-<div class="cal-day">20</div>
-<div class="cal-day active">21</div>
-<div class="cal-day">22</div>
-<div class="cal-day">23</div>
-<div class="cal-day">24</div>
-<div class="cal-day">25</div>
-<div class="cal-day">26</div>
-<div class="cal-day">27</div>
-<div class="cal-day">28</div>
-</div>
-</div>
-<a class="wixui-button wixui-button--primary" href="#book-session" style="width: 100%; justify-content: center;">
-<span>Book A Session: $399</span>
-<span class="wixui-button__icon-circle">
-<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
-<line x1="5" x2="19" y1="12" y2="12"></line>
-<polyline points="12 5 19 12 12 19"></polyline>
-</svg>
-</span>
-</a>
-</div>
+<div class="consultation-cta-col"><a class="wixui-button wixui-button--primary consultation-cta-btn" href="https://www.menslifemastery.com/services" rel="noopener noreferrer" target="_blank"><span class="wixui-button__label">Book A Session: $399</span><span class="wixui-button__icon-circle"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a></div>
 </div>
 </section>
 <!-- 7. REVIEWS SECTION (Exact Screenshot Staggered Layout on #303339) -->
@@ -3919,7 +4422,7 @@ Transform your confidence, relationships, and Sexual Market Value (SMV) with fou
 <li><a href="6-week-modules.html">6-Week Program Roadmap</a></li>
 <li><a href="12-week-modules.html">12-Week Program Roadmap</a></li>
 <li><a href="programs-overview.html#compare">Program Comparison Matrix</a></li>
-<li><a href="#discovery-call">Book Free Discovery Call</a></li>
+<li><a href="https://www.menslifemastery.com/contact-us" rel="noopener noreferrer" target="_blank">Book Free Discovery Call</a></li>
 </ul>
 </div>
 </div>
