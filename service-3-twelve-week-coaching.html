@@ -4479,26 +4479,238 @@ h2.hero-headline-william {
       box-sizing: border-box !important;
     }
   }
+
+  /* 5. BLACK ORIGINAL HEADER WITH 4 DROPDOWN SECTIONS + 6 SOCIAL ICONS */
+  header.wixui-header.orig-dd-header {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .orig-dd-inner {
+    max-width: 1380px !important;
+    margin: 0 auto !important;
+    padding: 10px 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 24px !important;
+    min-height: 78px !important;
+  }
+  .orig-dd-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    text-decoration: none !important;
+  }
+  .orig-dd-logo img {
+    height: 54px !important;
+    width: auto !important;
+    max-width: 240px !important;
+    display: block !important;
+    object-fit: contain !important;
+    filter: none !important;
+  }
+  .orig-dd-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+  .orig-dd-list {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 32px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .orig-dd-list > li {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .orig-dd-list > li > a.wixui-horizontal-menu__item-label {
+    color: #FFFFFF !important;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 10px 2px !important;
+    border-bottom: none !important;
+    transition: color 0.18s ease !important;
+  }
+  .orig-dd-list > li.active > a.wixui-horizontal-menu__item-label {
+    color: #E8D6A4 !important;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .orig-dd-list > li > a.wixui-horizontal-menu__item-label:hover,
+    .orig-dd-list > li.has-dropdown:hover > a.wixui-horizontal-menu__item-label {
+      color: #E8D6A4 !important;
+    }
+    .orig-dd-list > li.has-dropdown:hover > .nav-dropdown-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+      pointer-events: auto !important;
+    }
+  }
+  .orig-dd-list .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    min-width: 230px !important;
+    background: #141518 !important;
+    border: 1px solid rgba(255,255,255,0.14) !important;
+    border-radius: 10px !important;
+    padding: 8px 0 !important;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.45) !important;
+    z-index: 1200 !important;
+    list-style: none !important;
+    margin: 0 !important;
+  }
+  .orig-dd-list .nav-dropdown-menu a.dropdown-item {
+    display: block !important;
+    padding: 10px 18px !important;
+    color: #FFFFFF !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .orig-dd-list .nav-dropdown-menu a.dropdown-item:hover {
+      background: rgba(255,255,255,0.08) !important;
+      color: #E8D6A4 !important;
+    }
+  }
+  .orig-dd-social {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-shrink: 0 !important;
+  }
+  .orig-dd-social a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 26px !important;
+    height: 26px !important;
+    opacity: 0.9 !important;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .orig-dd-social a:hover {
+      opacity: 1 !important;
+    }
+  }
+  .orig-dd-social img {
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+  .orig-dd-toggle {
+    display: none !important;
+    background: transparent !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
+    border-radius: 8px !important;
+    width: 44px !important;
+    height: 44px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  @media (max-width: 1024px) {
+    .orig-dd-social {
+      display: none !important;
+    }
+    .orig-dd-toggle {
+      display: inline-flex !important;
+    }
+    .orig-dd-nav {
+      display: none !important;
+      position: fixed !important;
+      top: 78px !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: calc(100dvh - 78px) !important;
+      background: #000000 !important;
+      padding: 20px 24px calc(32px + env(safe-area-inset-bottom, 0px)) !important;
+      overflow-y: auto !important;
+      z-index: 999 !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      justify-content: flex-start !important;
+    }
+    .orig-dd-nav.is-open {
+      display: flex !important;
+    }
+    .orig-dd-list {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 6px !important;
+      width: 100% !important;
+    }
+    .orig-dd-list > li > a.wixui-horizontal-menu__item-label {
+      width: 100% !important;
+      min-height: 46px !important;
+      justify-content: space-between !important;
+      font-size: 16px !important;
+      padding: 10px 8px !important;
+      border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+    }
+    .orig-dd-list .nav-dropdown-menu {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      pointer-events: auto !important;
+      background: rgba(255,255,255,0.04) !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 4px 0 8px 12px !important;
+      margin-top: 4px !important;
+    }
+    .orig-dd-list .nav-dropdown-menu a.dropdown-item {
+      min-height: 44px !important;
+      display: flex !important;
+      align-items: center !important;
+      font-size: 15px !important;
+    }
+  }
 </style></head>
 <body>
 <div class="page-main-wrapper" id="page-wrapper">
 <!-- WIX LIVE HEADER COMPONENT -->
-<header class="wixui-header" id="comp-mj30m5sr">
-<div class="wixui-header__inner">
-<a class="wixui-header__logo" href="programs-overview.html" title="Men's Life Mastery">
-<img alt="Men's Life Mastery Logo" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png" style="filter: none !important;"/>
+<header class="wixui-header orig-dd-header" id="comp-mj30m5sr">
+<div class="orig-dd-inner">
+<a aria-label="Men's Life Mastery Home" class="orig-dd-logo" href="programs-overview.html">
+<img alt="Men's Life Mastery™" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_339,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png"/>
 </a>
-<nav class="wixui-horizontal-menu">
-<ul class="wixui-horizontal-menu__list">
+<nav aria-label="Primary Navigation" class="wixui-horizontal-menu orig-dd-nav">
+<ul class="wixui-horizontal-menu__list orig-dd-list">
 <li class="wixui-horizontal-menu__item">
 <a class="wixui-horizontal-menu__item-label" href="programs-overview.html">Programs &amp; Pricing</a>
 </li>
 <li class="wixui-horizontal-menu__item has-dropdown">
 <a class="wixui-horizontal-menu__item-label dropdown-toggle" href="video-course.html">
-Video Course
-<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
-<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-</svg>
+            Video Course
+            <svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
 </a>
 <ul class="nav-dropdown-menu">
 <li><a class="dropdown-item" href="video-course.html">Course Overview</a></li>
@@ -4507,10 +4719,8 @@ Video Course
 </li>
 <li class="wixui-horizontal-menu__item has-dropdown active">
 <a class="wixui-horizontal-menu__item-label dropdown-toggle" href="6-week-coaching.html">
-1:1 Coaching
-<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
-<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-</svg>
+            1:1 Coaching
+            <svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
 </a>
 <ul class="nav-dropdown-menu">
 <li><a class="dropdown-item" href="6-week-coaching.html">6-Week Transformation</a></li>
@@ -4521,10 +4731,8 @@ Video Course
 </li>
 <li class="wixui-horizontal-menu__item has-dropdown">
 <a class="wixui-horizontal-menu__item-label dropdown-toggle" href="6-week-modules.html">
-Curriculums
-<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
-<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-</svg>
+            Curriculums
+            <svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
 </a>
 <ul class="nav-dropdown-menu">
 <li><a class="dropdown-item" href="6-week-modules.html">6-Week Roadmap</a></li>
@@ -4532,10 +4740,17 @@ Curriculums
 </ul>
 </li>
 </ul>
-<a class="wixui-button wixui-button--header" href="#discovery-call">Book Your Free Discovery Call</a>
 </nav>
-<button aria-expanded="false" aria-label="Open menu" class="mobile-nav-toggle">
-<svg height="24" viewbox="0 0 24 24" width="24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+<div aria-label="Social Media Links" class="orig-dd-social">
+<a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" rel="noopener noreferrer" target="_blank"><img alt="Instagram" src="https://static.wixstatic.com/media/40898a93cfff4578b1779073137eb1b4.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/40898a93cfff4578b1779073137eb1b4.png"/></a>
+<a aria-label="Facebook" href="https://www.facebook.com/menslifemaster" rel="noopener noreferrer" target="_blank"><img alt="Facebook" src="https://static.wixstatic.com/media/aebe5b6fd55f471a936c72ff2c8289d7.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aebe5b6fd55f471a936c72ff2c8289d7.png"/></a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@menslifemastery" rel="noopener noreferrer" target="_blank"><img alt="TikTok" src="https://static.wixstatic.com/media/11062b_4b99075e76df40baa581ac7f068321cf~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_4b99075e76df40baa581ac7f068321cf~mv2.png"/></a>
+<a aria-label="X" href="https://x.com/menslifemastery" rel="noopener noreferrer" target="_blank"><img alt="X" src="https://static.wixstatic.com/media/11062b_dddc4f38b4d0473c98be1489c5a83f30~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_dddc4f38b4d0473c98be1489c5a83f30~mv2.png"/></a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/mens-life-mastery" rel="noopener noreferrer" target="_blank"><img alt="LinkedIn" src="https://static.wixstatic.com/media/11062b_701377645cb348b9bd31d5ae3a7c85e0~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_701377645cb348b9bd31d5ae3a7c85e0~mv2.png"/></a>
+<a aria-label="YouTube" href="https://www.youtube.com/@menslifemastery" rel="noopener noreferrer" target="_blank"><img alt="YouTube" src="https://static.wixstatic.com/media/a1fed5f687844a6e8f42e017f71dfcb4.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a1fed5f687844a6e8f42e017f71dfcb4.png"/></a>
+</div>
+<button aria-expanded="false" aria-label="Open menu" class="mobile-nav-toggle orig-dd-toggle" onclick="(function(btn){var hdr=btn.closest('header');var nav=hdr.querySelector('.orig-dd-nav');var open=nav.classList.toggle('is-open');btn.setAttribute('aria-expanded',open);})(this)" type="button">
+<svg fill="#FFFFFF" height="24" viewbox="0 0 24 24" width="24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
 </button>
 </div>
 </header>
