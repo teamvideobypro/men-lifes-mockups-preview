@@ -4123,171 +4123,6 @@ h2.hero-headline-william {
   background: var(--surface-dark) !important;
 }
 </style><style id="client-final-layout-fixes">
-  /* 1. ORIGINAL HEADER REVERT (#000000, single row, 9 links + 6 social icons) */
-  header.wixui-header.orig-wix-header {
-    background: #000000 !important;
-    background-color: #000000 !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 1000 !important;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-  .orig-header-inner {
-    max-width: 1400px !important;
-    margin: 0 auto !important;
-    padding: 10px 24px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 18px !important;
-    min-height: 76px !important;
-  }
-  .orig-header-logo {
-    display: inline-flex !important;
-    align-items: center !important;
-    flex-shrink: 0 !important;
-    text-decoration: none !important;
-  }
-  .orig-header-logo img {
-    height: 52px !important;
-    width: auto !important;
-    max-width: 240px !important;
-    display: block !important;
-    object-fit: contain !important;
-  }
-  .orig-header-nav {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-  }
-  .orig-nav-list {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-wrap: nowrap !important;
-  }
-  .orig-nav-list li {
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-shrink: 0 !important;
-  }
-  .orig-nav-list a {
-    color: #FFFFFF !important;
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
-    font-size: 13.5px !important;
-    font-weight: 400 !important;
-    line-height: 1.3 !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    padding: 8px 2px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    transition: color 0.18s ease !important;
-  }
-  .orig-nav-list a.orig-nav-highlight {
-    color: #E8D6A4 !important;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .orig-nav-list a:hover {
-      color: #E8D6A4 !important;
-    }
-  }
-  .orig-header-social {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    flex-shrink: 0 !important;
-  }
-  .orig-header-social a {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 26px !important;
-    height: 26px !important;
-    opacity: 0.9 !important;
-    transition: opacity 0.18s ease !important;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .orig-header-social a:hover {
-      opacity: 1 !important;
-    }
-  }
-  .orig-header-social img {
-    width: 20px !important;
-    height: 20px !important;
-    display: block !important;
-    object-fit: contain !important;
-  }
-  .orig-mobile-toggle {
-    display: none !important;
-    background: transparent !important;
-    border: 1px solid rgba(255,255,255,0.28) !important;
-    border-radius: 8px !important;
-    width: 44px !important;
-    height: 44px !important;
-    padding: 10px 8px !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: stretch !important;
-    cursor: pointer !important;
-    flex-shrink: 0 !important;
-  }
-  .orig-mobile-toggle span {
-    display: block !important;
-    height: 2px !important;
-    background: #FFFFFF !important;
-    border-radius: 2px !important;
-  }
-  @media (max-width: 1180px) {
-    .orig-header-social {
-      display: none !important;
-    }
-    .orig-mobile-toggle {
-      display: inline-flex !important;
-    }
-    .orig-header-nav {
-      display: none !important;
-      position: fixed !important;
-      top: 76px !important;
-      left: 0 !important;
-      right: 0 !important;
-      height: calc(100dvh - 76px) !important;
-      background: #000000 !important;
-      padding: 20px 24px calc(32px + env(safe-area-inset-bottom, 0px)) !important;
-      overflow-y: auto !important;
-      z-index: 999 !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      justify-content: flex-start !important;
-    }
-    .orig-header-nav.is-open {
-      display: flex !important;
-    }
-    .orig-nav-list {
-      flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 4px !important;
-      width: 100% !important;
-    }
-    .orig-nav-list a {
-      font-size: 16px !important;
-      min-height: 46px !important;
-      width: 100% !important;
-      padding: 10px 12px !important;
-      border-bottom: 1px solid rgba(255,255,255,0.1) !important;
-    }
-  }
-
   /* 2. ORIGINAL FOOTER REVERT (#000000, centered column) */
   footer.wixui-footer.orig-wix-footer {
     background: #000000 !important;
@@ -4429,34 +4264,59 @@ h2.hero-headline-william {
 <body>
 <div class="page-main-wrapper" id="page-wrapper">
 <!-- WIX LIVE HEADER COMPONENT -->
-<header class="wixui-header orig-wix-header" id="comp-mj30m5sr">
-<div class="orig-header-inner">
-<a aria-label="Men's Life Mastery Home" class="orig-header-logo" href="https://www.menslifemastery.com/">
-<img alt="Men's Life Mastery™" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_339,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png"/>
+<header class="wixui-header" id="comp-mj30m5sr">
+<div class="wixui-header__inner">
+<a class="wixui-header__logo" href="programs-overview.html" title="Men's Life Mastery">
+<img alt="Men's Life Mastery Logo" src="https://static.wixstatic.com/media/e9f5cd_261300ef3feb40f2b7fa97ee900273b8~mv2.png/v1/fill/w_291,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/men's_logo.png" style="filter: none !important;"/>
 </a>
-<nav aria-label="Primary Navigation" class="orig-header-nav">
-<ul class="orig-nav-list">
-<li><a href="https://www.menslifemastery.com/blank">New Page</a></li>
-<li><a href="https://www.menslifemastery.com/">Home</a></li>
-<li><a class="orig-nav-highlight" href="https://www.menslifemastery.com/contact-us">Book a Free Consultation</a></li>
-<li><a href="https://www.menslifemastery.com/services">Coaching</a></li>
-<li><a href="https://www.menslifemastery.com/about-bill-cottles">About</a></li>
-<li><a href="https://www.menslifemastery.com/general-1">Book</a></li>
-<li><a href="https://www.menslifemastery.com/sexual-market-value-test">Tests &amp; Assesments</a></li>
-<li><a href="https://www.menslifemastery.com/blog">Blog</a></li>
-<li><a href="https://www.menslifemastery.com/category/all-products">Shop</a></li>
+<nav class="wixui-horizontal-menu">
+<ul class="wixui-horizontal-menu__list">
+<li class="wixui-horizontal-menu__item">
+<a class="wixui-horizontal-menu__item-label" href="programs-overview.html">Programs &amp; Pricing</a>
+</li>
+<li class="wixui-horizontal-menu__item has-dropdown">
+<a class="wixui-horizontal-menu__item-label dropdown-toggle" href="video-course.html">
+Video Course
+<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
+<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<ul class="nav-dropdown-menu">
+<li><a class="dropdown-item" href="video-course.html">Course Overview</a></li>
+<li><a class="dropdown-item" href="video-course-modules.html">All Modules</a></li>
 </ul>
+</li>
+<li class="wixui-horizontal-menu__item has-dropdown active">
+<a class="wixui-horizontal-menu__item-label dropdown-toggle" href="6-week-coaching.html">
+1:1 Coaching
+<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
+<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<ul class="nav-dropdown-menu">
+<li><a class="dropdown-item" href="6-week-coaching.html">6-Week Transformation</a></li>
+<li><a class="dropdown-item" href="12-week-coaching.html">12-Week Transformation</a></li>
+<li><a class="dropdown-item" href="1-on-1-coaching.html">60-Min Session</a></li>
+<li><a class="dropdown-item" href="smv-session.html">SMV Strategy Session</a></li>
+</ul>
+</li>
+<li class="wixui-horizontal-menu__item has-dropdown">
+<a class="wixui-horizontal-menu__item-label dropdown-toggle" href="6-week-modules.html">
+Curriculums
+<svg class="dropdown-chevron" fill="none" height="6" viewbox="0 0 10 6" width="10">
+<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<ul class="nav-dropdown-menu">
+<li><a class="dropdown-item" href="6-week-modules.html">6-Week Roadmap</a></li>
+<li><a class="dropdown-item" href="12-week-modules.html">12-Week Roadmap</a></li>
+</ul>
+</li>
+</ul>
+<a class="wixui-button wixui-button--header" href="https://www.menslifemastery.com/contact-us" rel="noopener noreferrer" target="_blank">Book Your Free Discovery Call</a>
 </nav>
-<div aria-label="Social Media Links" class="orig-header-social">
-<a aria-label="Instagram" href="https://www.instagram.com/mens.lifemastery" rel="noopener noreferrer" target="_blank"><img alt="Instagram" src="https://static.wixstatic.com/media/40898a93cfff4578b1779073137eb1b4.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/40898a93cfff4578b1779073137eb1b4.png"/></a>
-<a aria-label="Facebook" href="https://www.facebook.com/menslifemaster" rel="noopener noreferrer" target="_blank"><img alt="Facebook" src="https://static.wixstatic.com/media/aebe5b6fd55f471a936c72ff2c8289d7.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aebe5b6fd55f471a936c72ff2c8289d7.png"/></a>
-<a aria-label="TikTok" href="https://www.tiktok.com/@menslifemastery" rel="noopener noreferrer" target="_blank"><img alt="TikTok" src="https://static.wixstatic.com/media/11062b_4b99075e76df40baa581ac7f068321cf~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_4b99075e76df40baa581ac7f068321cf~mv2.png"/></a>
-<a aria-label="X" href="https://x.com/menslifemastery" rel="noopener noreferrer" target="_blank"><img alt="X" src="https://static.wixstatic.com/media/11062b_dddc4f38b4d0473c98be1489c5a83f30~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_dddc4f38b4d0473c98be1489c5a83f30~mv2.png"/></a>
-<a aria-label="LinkedIn" href="https://www.linkedin.com/company/mens-life-mastery" rel="noopener noreferrer" target="_blank"><img alt="LinkedIn" src="https://static.wixstatic.com/media/11062b_701377645cb348b9bd31d5ae3a7c85e0~mv2.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_701377645cb348b9bd31d5ae3a7c85e0~mv2.png"/></a>
-<a aria-label="YouTube" href="https://www.youtube.com/@menslifemastery" rel="noopener noreferrer" target="_blank"><img alt="YouTube" src="https://static.wixstatic.com/media/a1fed5f687844a6e8f42e017f71dfcb4.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a1fed5f687844a6e8f42e017f71dfcb4.png"/></a>
-</div>
-<button aria-expanded="false" aria-label="Open menu" class="mobile-nav-toggle orig-mobile-toggle" onclick="(function(btn){var hdr=btn.closest('header');var nav=hdr.querySelector('.orig-header-nav');var open=nav.classList.toggle('is-open');btn.setAttribute('aria-expanded',open);})(this)" type="button">
-<span></span><span></span><span></span>
+<button aria-expanded="false" aria-label="Open menu" class="mobile-nav-toggle">
+<svg height="24" viewbox="0 0 24 24" width="24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
 </button>
 </div>
 </header>
@@ -4753,7 +4613,6 @@ h2.hero-headline-william {
             </p>
 </div>
 </div>
-
 </div>
 </section>
 <!-- 5. WHO IT'S FOR (Warm Cream Section) -->
@@ -4773,7 +4632,6 @@ h2.hero-headline-william {
                 The man who needs targeted help on one part of his dating life. The video course student who wants Bill's eyes on his work. And program graduates who want a tune-up, a 90-day check-in or help with a new situation.
               </p>
 </div>
-
 </div>
 <!-- Card B: Need a Comprehensive Diagnostic? -->
 <div class="who-card highlight-card">
@@ -4787,7 +4645,6 @@ h2.hero-headline-william {
                 💡 $199 SMV Strategy Session • Or book a free discovery call for full programs.
               </div>
 </div>
-
 </div>
 </div>
 </div>
